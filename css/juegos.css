@@ -1,0 +1,778 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.logo-titulo{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+.logo{
+    max-width: 5rem;
+}
+
+.derecha{
+    gap: 1rem;
+    right: 0;
+    padding: 1rem;
+    margin-left: auto;
+    display: flex;
+}
+.boton-header{
+    border: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.menu{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    background-color: #ececec;
+}
+
+.abrir-menu{
+    display: flex;
+    align-items: start;
+    top: 120px;
+    padding: 1rem;
+    color: white;
+}
+.abrir-menu:hover{
+    border-radius: 20px;
+    background-color: #ff1209;
+    color: white;
+}
+.abrir-menu, .cerrar-menu{
+    display: block;
+    border: 0;
+    font-size: 3rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav{
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: start;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 0  2rem 2rem 0;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    z-index: 500;
+}
+
+.nav.visible{
+    opacity: 1;
+    visibility: visible;
+    animation: animacion-menu 0.3s linear forwards;
+}
+
+@keyframes animacion-menu {
+    0%{
+        transform: translateX(-100px);
+    }    
+    10%{
+        transform: translateX(-100px);
+    }
+    60%{
+        transform: translateX(-50px);
+    }
+}
+
+.nav-list{
+    margin-top: 10px;
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.nav-list a{
+    border-radius: 20px;
+    padding: 10px 0;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-list .divAccion{
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.nav-list .divAccion:hover{
+    text-decoration: underline;
+}
+
+.nav-list .titulo{
+    margin-top: 10px;
+}
+.divAccion .chevron{
+    cursor: pointer;
+    background-color: transparent;
+    border: transparent;
+    font-size: 20px;
+}
+
+.header-menu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.nav .titulo{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menu-principal{
+    display: flex;
+    background-color: #E20A03;
+    align-items: center;
+    font-size: 25px;
+}
+
+
+.list-nav-bar{
+    display: flex;
+    list-style-type: none;
+    gap: 2.5rem;
+    
+}
+
+.list-nav-bar a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.list-nav-bar .activo{
+    border-radius: 20px;
+    background-color: #ff1209;
+}
+
+.list-nav-bar a:hover{
+    border-radius: 20px;
+    background-color: #ff1209;
+    color: white;
+}
+
+
+.nav-cuenta{
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 30px;
+    margin-top: 80px;
+    background-color: #343434;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.nav-cuenta.visible{
+    opacity: 1;
+    visibility: visible;
+}
+
+.cuenta-list{
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem;
+    z-index: 500;
+}
+.cuenta-list a{
+    padding: 1rem;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+.cuenta-list a:hover{
+    border-radius: 20px;
+    background-color: #202020;
+    color: red;
+}
+
+.filtro{
+    position: sticky;
+    top: 0px;
+    left: 0;
+    padding: 10px 0px;
+    width: 30%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #ececec;
+    overflow-y: auto;
+    overflow-x: hidden;
+    gap: 10px;
+        
+}
+.filtro .titulo{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.opcion-toggle {
+    align-items: center; 
+    gap: 15px; 
+    width: 100%;
+    display: none;
+    padding: 0 10px;
+}
+
+.opcion-toggle.visible{
+    display: flex;
+}
+
+.opcion-toggle p{
+    font-size: 20px;
+}
+
+.toggle{
+    display: none;
+}
+
+.label{
+    background-color: #383838;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+.toggle:checked + .label{
+    background-color: #e20a03;
+}
+
+.ball{
+    background-color: white;
+    width: 37px;
+    height: 37px;
+    border-radius: 50px;
+    position: absolute;
+    top: 1.4px;
+    left: 1.5px;
+    animation: slideOff 0.3s linear forwards;
+}
+
+.toggle:checked + .label .ball{
+    animation: slideOn 0.3s linear forwards;
+}
+
+@keyframes slideOn{
+    0%{
+        transform: translateX(0) scale(1);
+    }
+
+    50%{
+        transform: translateX(20px) scale(1.2);
+    }
+
+    100%{
+        transform: translateX(40px) scale(1);
+    }
+
+}
+
+@keyframes slideOff{
+
+    0%{
+        transform: translateX(40px) scale(1);
+    }
+
+    50%{
+        transform: translateX(20px) scale(1.2);
+    }
+
+
+    100%{
+        transform: translateX(0) scale(1);
+    }
+
+    
+    
+    
+}
+
+.busqueda{
+    background-color: white;
+    border-radius: 20px;
+    border-color: #202020;
+    display: flex;
+    gap: 5%;
+    padding: 10px;
+}
+
+.busqueda .boton{
+    left: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    border: transparent;
+}
+
+.busqueda .barra{
+    background-color: transparent;
+    border: transparent;
+    font-size: 20px;
+}
+
+.categorias{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    align-items: center;
+}
+
+.categorias input{
+    accent-color: #e20a03;
+    width: 20px;
+    height: 20px;
+}
+
+.porPrecio{
+    padding: 0 10px;
+    display: none;
+    gap: 2px;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+.porPrecio.visible{
+    display: flex;
+}
+
+.porPrecio input{
+    border: white;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    max-width: 150px;
+}
+
+.porPrecio button{
+    border: transparent;
+    background-color: transparent;
+    font-size: 30px;
+    cursor: pointer;
+}
+.menu-desplegable{
+    border-radius: 20px;
+    padding: 10px 10px;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-desplegable button{
+    cursor: pointer;
+    background-color: transparent;
+    border: transparent;
+    font-size: 20px;
+    font-weight: bold;    
+}
+
+.menu-desplegable:hover{
+    background: #d3d3d3;
+}
+
+.cont-categorias{
+    padding: 0 10px;
+    display: none;
+    gap: 10px;
+}
+
+.cont-categorias.visible{
+    display: flex;
+    flex-direction: column;
+}
+
+.separacion{
+    display: flex;
+    width: 90%;
+    height: 2px;
+    margin: 0 auto;
+    opacity: 0.5;
+}
+
+@keyframes rotarIconoU {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(180deg);
+    }
+}
+@keyframes rotarIconoD {
+    from {
+        transform: rotate(180deg);
+    } to {
+        transform: rotate(0deg);
+    }
+}
+
+
+/* Apuntamos directamente a la etiqueta i de Bootstrap dentro de tus botones */
+.menu-desplegable button i {
+    display: inline-block;
+    transform: rotate(0deg); /* Lo asegura en su posición inicial */
+}
+
+.menu-desplegable:not(.activo) button i {
+    animation: rotarIconoD 0.3s ease-out forwards;
+}
+/* La animación solo se ejecuta cuando agregas la clase .rotar con JavaScript */
+.menu-desplegable.activo button i {
+    animation: rotarIconoU 0.3s ease-out forwards;
+}
+
+.almacenamiento{
+    display: none;
+    padding: 0 10px;
+}
+
+.almacenamiento.visible{
+    display: flex;
+    flex-direction: column;
+}
+
+.consola{
+    display: none;
+    padding: 0 10px;
+}
+
+.consola.visible{
+    display: flex;
+    flex-direction: column;
+}
+
+.condicion{
+    display: none;
+    padding: 0 10px;
+}
+
+.condicion.visible{
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-principal{
+    display: flex;
+}
+
+.contenedor-productos{
+    background-color: #fafafa;
+    display: flex;
+    width: 70%;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.busqueda-productos{
+    height: 50px;
+    width: 90%;
+    border-radius: 20px;
+    border-color: #202020;
+    border-style: dashed;
+    display: flex;
+    gap: 5%;
+    padding: 10px;
+}
+
+.busqueda-productos .boton{
+    left: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    border: transparent;
+}
+
+.busqueda-productos .barra{
+    background-color: transparent;
+    border: none;
+    
+    width: 100%;
+    font-size: 20px;
+}
+
+.busqueda-productos .barra:focus{
+    outline: none;
+  border-color: transparent; /* O puedes usar 'border: none;' */
+}
+
+.productos img{
+    background-color: white;
+    border-radius: 20px;
+    width: 250px;
+}
+.productos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 280px;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: #f1f1f1;
+    padding: 10px;
+    animation: achicar 0.3s linear forwards;
+    cursor: pointer;
+}
+
+.productos .subtitulo{
+    color: #717171;
+}
+
+.productos:hover{
+    animation: agrandar  0.3s linear forwards;
+}
+
+@keyframes agrandar{
+   from{
+    transform: scale(1);
+   }to{
+    transform: scale(1.05);
+   }
+}
+
+@keyframes achicar{
+    from{
+        transform: scale(1.05);
+    } to{
+        transform: scale(1);
+    }
+}
+
+.productos .precio{
+    padding: 4px 0;
+    font-size: 30px;   
+    font-weight: bold;
+
+}
+
+.productos-principal{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.info{
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.precarro{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.precarro .icono-original{
+    background: none;
+    border: none;
+    font-size: 2rem;         
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.precarro .icono-hover{
+    background: none;
+    border: none;
+    font-size: 2rem;         
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+    display: none;
+    transition: opacity 0.3s ease; 
+}
+
+.precarro .icono-contenedor:hover .icono-original {
+    display: none;
+}
+
+.precarro .icono-contenedor:hover .icono-hover {
+    display: block;
+}
+
+.alerta{
+    z-index: 2000;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    border-radius: 20px;
+    gap: 5px;
+    align-items: start;
+    display: none;
+    flex-direction: column;
+    width: 60%;
+    height: 60%;
+    top:20%;
+    left: 20%;
+    padding: 40px;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.alerta.visible{
+    display: flex;
+    animation: animacion 0.3s linear forwards;
+}
+
+
+
+.alerta p{
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+.alerta i{
+    font-size: 100px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.alerta .titulo{
+    font-size: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    color: green;
+    
+}
+
+.alerta .titulo:hover{
+    text-decoration: underline;
+}
+
+.cerrar-alerta{
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.cerrar-alerta:hover{
+    text-decoration: underline;
+}
+
+@keyframes animacion {
+    from{
+        opacity: 0;
+    } to{
+        opacity: 0.5;
+    } to{
+        opacity: 1;
+    }
+}
+
+.alerta .icono-contenedor{
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+.alerta .icono-original{
+    background: none;
+    border: none;
+    font-size: 2rem;    
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute;
+    opacity: 1;
+}
+
+.alerta .icono-hover{
+    background: none;
+    border: none;
+    font-size: 2rem;     
+    padding: 10px;
+    border-radius: 20px;
+    color: green;
+    opacity: 0;
+    position: absolute;
+}
+
+.alerta .icono-final{
+    background: none;
+    border: none;
+    font-size: 2rem;     
+    padding: 10px;
+    border-radius: 20px;
+    color: green;
+    opacity: 0;
+    position: absolute;
+}
+
+@keyframes aparecer-check {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    70%{
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.alerta.visible .icono-hover{
+    animation: aparecer-check .5s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes desaparecer-original {
+    from{
+        opacity: 1;
+    }to{
+        opacity: 0;
+    }
+}
+
+.alerta.visible .icono-original{
+    animation: desaparecer-original 1s forwards;
+    
+}

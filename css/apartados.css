@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.contenedor{
+    background-image: url(../iconos/background.jpg);
+    background-size: contain;
+    background-color: rgba(39, 39, 39, 0.6);
+    background-blend-mode: darken;
+}
+.logo-titulo{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+.logo{
+    max-width: 5rem;
+}
+
+.derecha{
+    gap: 1rem;
+    right: 0;
+    padding: 1rem;
+    margin-left: auto;
+    display: flex;
+}
+.boton-header{
+    border: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.menu{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    background-color: #E20A03;
+    color: white;
+}
+.menu i, a, .logo-titulo{
+    color: white;
+}
+
+.nav-cuenta{
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 30px;
+    margin-top: 80px;
+    background-color: #343434;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.nav-cuenta.visible{
+    opacity: 1;
+    visibility: visible;
+}
+
+.cuenta-list{
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem;
+}
+.cuenta-list a{
+    padding: 1rem;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+.cuenta-list a:hover{
+    border-radius: 20px;
+    background-color: #202020;
+    color: red;
+}
+
+.contenedor-principal{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 10px;
+    background-color: #EFEFEF;
+    width: 80%;
+    height: 70vh;
+    padding: 20px;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+.-titulo-back{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.-titulo-back .boton{
+    border: transparent;
+    background-color: transparent;
+}
+
+.-titulo-back i{
+    color: black;
+    font-size: 2rem;
+}
+
+.-titulo-back h1{
+    font-size: 2rempx;
+    font-weight: 400;
+    margin-left: 2%;
+}
+
+.tabla-productos{
+    background-color: #d5d5d5;
+    border-radius: 20px;
+    margin-top: 10px;
+    flex-grow: 1; 
+    display: flex; /* Para controlar la tabla real de adentro */
+    flex-direction: column;
+}
+
+.tabla-principal{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+td a{
+    color: #E20A03;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+th {
+  background-color: #f2f2f2;
+}
+
+.tb{
+    border-radius: 20px;
+    padding: 10px;
+    border-color: #E20A03;
+}
+.tb:hover{
+    background-color: #ff1209;
+    color: white;
+    cursor: pointer;
+    
+}
+
+.busqueda{
+    background-color: white;
+    border-radius: 20px;
+    border-color: #202020;
+    display: flex;
+    gap: 5%;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.busqueda .boton{
+    font-size: 20px;
+    background-color: transparent;
+    border: transparent;
+}
+
+.busqueda .barra{
+    background-color: transparent;
+    border: transparent;
+    font-size: 20px;
+    width: 100%;
+}
+.busqueda input:focus{
+    outline: none;
+    border-color: transparent; /* O puedes usar 'border: none;' */
+}

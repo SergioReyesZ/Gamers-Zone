@@ -1,0 +1,25 @@
+/* Contenido normal */
+z-index: 1;
+
+/* Paneles laterales */
+z-index: 100;
+
+/* Menús desplegables */
+z-index: 500;
+
+/* Modales */
+z-index: 1000;
+
+/* Alertas o notificaciones */
+z-index: 2000;
+
+
+Emmet uses specific symbols to build tag relationships:
+Basic tag: div → <div></div>
+Child (>): ul>li → <ul><li></li></ul>
+Sibling (+): h1+p → <h1></h1><p></p>
+Multiplication (*): li*3 → <li></li><li></li><li></li>
+Class (.): div.container → <div class="container"></div>
+ID (#): div#main → <div id="main"></div>
+Text ({}): a{Click Me} → <a href="">Click Me</a>
+Numbering ($): li.item$*3 → Creates classes item1, item2, and item3

@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.documento{
+    background-image: url(../iconos/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(39, 39, 39, 0.6);
+    background-blend-mode: darken;
+}
+
+.login{
+
+  background-color: rgba(0, 0, 0, 0.6); /* Negro con 20% de opacidad */
+    gap: 5px;
+    border-radius: 20px;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    margin-top: 5%;
+    margin-left: 25%;
+    padding: 20px;
+}
+
+input{
+    border: white;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 20px;
+    width: 90%;
+}
+
+.titulo{
+    margin-left: 30%;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.subtitulo{
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.subtitulo-link{
+    margin-top: 10px;
+    font-size: 20px;
+    margin-left: 25%;
+    color: white;
+    font-weight: bold;
+}
+.subtitulo-link a{
+    color: greenyellow;
+}
+.iniciar{
+    background-color:	#f50b0b;
+    color: white;
+    padding: 20px;
+    margin-top: 10px;
+    margin-left: 25%;
+    font-size: 20px;
+    border-radius: 20px;
+    border: white;
+    width: 50%;
+}
+
+.iniciar:hover{
+    background-color: #ac0505;
+}
+
+.boton{
+    background-color: transparent;
+    color: white;
+    border: transparent;
+    cursor: pointer;
+}
+.boton a{
+    text-decoration: none;
+    color: white;
+}
+.boton i{
+    font-size: 30px;
+}

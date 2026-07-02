@@ -1,0 +1,483 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.contenedor{
+    background-image: url(../iconos/background.jpg);
+    background-size: contain;
+    background-color: rgba(39, 39, 39, 0.6);
+    background-blend-mode: darken;
+}
+
+.logo{
+    max-width: 5rem;
+}
+
+.derecha{
+    gap: 1rem;
+    right: 0;
+    padding: 1rem;
+    margin-left: auto;
+    display: flex;
+}
+.boton-header{
+    border: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.menu{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    background-color: #ececec;
+    
+}
+
+.abrir-menu{
+    display: flex;
+    align-items: start;
+    top: 120px;
+    padding: 1rem;
+    color: white;
+}
+.abrir-menu:hover{
+    border-radius: 20px;
+    background-color: #ff1209;
+    color: white;
+}
+.abrir-menu, .cerrar-menu{
+    display: block;
+    border: 0;
+    font-size: 3rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav{
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: start;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 0  2rem 2rem 0;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    overflow-y: auto;
+}
+
+.nav::-webkit-scrollbar{
+    display: none;
+}
+.nav.visible{
+    opacity: 1;
+    visibility: visible;
+    animation: animacion-menu 0.3s linear forwards;
+}
+
+@keyframes animacion-menu {
+    0%{
+        transform: translateX(-100px);
+    }    
+    10%{
+        transform: translateX(-100px);
+    }
+    60%{
+        transform: translateX(-50px);
+    }
+}
+
+.nav-list{
+    margin-top: 10px;
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.nav-list.ocultar{
+    display: none;
+}
+.nav-list a{
+    border-radius: 20px;
+    padding: 10px 0;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-list .divAccion{
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.nav-list .divAccion:hover{
+    text-decoration: underline;
+}
+
+.nav-list .titulo{
+    margin-top: 10px;
+}
+.divAccion .chevron{
+    cursor: pointer;
+    background-color: transparent;
+    border: transparent;
+    font-size: 20px;
+}
+
+.header-menu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.nav .titulo{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menu-principal{
+    display: flex;
+    background-color: #E20A03;
+    align-items: center;
+    font-size: 25px;
+}
+
+.busqueda input:focus{
+    outline: none;
+    border-color: transparent; /* O puedes usar 'border: none;' */
+}
+
+
+.list-nav-bar{
+    display: flex;
+    list-style-type: none;
+    gap: 2.5rem;
+}
+
+.list-nav-bar a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.list-nav-bar .activo{
+    border-radius: 20px;
+    background-color: #ff1209;
+}
+
+.list-nav-bar a:hover{
+    border-radius: 20px;
+    background-color: #ff1209;
+    color: white;
+}
+.busqueda{
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #d5d5d5;
+}
+.busqueda p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.buscar{
+    font-size: 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: white;
+    padding: 30px;
+    width: 80%;
+}
+
+.boton-escanear, .boton-filtrar{
+    border: 0;
+    font-size: 3rem;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.boton-filtrar:hover{
+    border-radius: 20px;
+    color: white;
+    background-color: #343434;
+}
+
+.busqueda-opc{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.contenedor{
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
+    height: 90vh;
+    padding-top: 1.5rem; /* Añade el espacio aquí arriba de forma global */
+    padding: 20px;
+}
+
+.carrito{
+    display: flex;
+    flex-direction: column;
+    width: 37%;
+    background-color: #d5d5d5;
+    
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.carrito p{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.carrito label{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.carrito .precio{
+    display: flex;
+    margin-top: auto; 
+    justify-content: space-between;
+    width: 100%;
+    align-items: center; 
+}
+.contenedor-izquierda{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 60%; 
+    padding: 0px; 
+}
+
+.tabla-productos{
+    background-color: #d5d5d5;
+    border-radius: 20px;
+    margin-top: 10px;
+    flex-grow: 1; 
+    display: flex; /* Para controlar la tabla real de adentro */
+    flex-direction: column;
+}
+
+.tabla-principal{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.nav-cuenta{
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 30px;
+    margin-top: 80px;
+    background-color: #343434;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.nav-cuenta.visible{
+    opacity: 1;
+    visibility: visible;
+}
+
+.cuenta-list{
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem;
+}
+.cuenta-list a{
+    padding: 1rem;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+.cuenta-list a:hover{
+    border-radius: 20px;
+    background-color: #202020;
+    color: red;
+}
+
+.tb{
+    border-radius: 20px;
+    padding: 10px;
+    border-color: #E20A03;
+
+}
+.tb:hover{
+    background-color: #ff1209;
+    color: white;
+    cursor: pointer;
+}
+
+.ta{
+    color: blue;
+    font-style: oblique;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.ta:hover{
+    color: darkblue
+}
+
+.check-op{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+}
+.check-op input{
+    accent-color: red;
+    width: 20px;
+    height: 20px;
+}
+
+.check-op label{
+    font-size: 20px;
+}
+
+.container-filtro{
+    position: relative;
+    display: inline-block;
+}
+
+.filtro{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #343434;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 10; 
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.filtro.visible{
+    opacity: 1;
+    visibility: visible;
+}
+
+.filtro label{
+    color: white;
+}
+
+.filtro input{
+
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.f-precio{
+    gap: 5px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.f-precio button{
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
+    border: transparent;
+    cursor: pointer;
+}
+
+.venta-end{
+    border-radius: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-color: #E20A03;
+}
+
+.venta-end:hover{
+    color: white;
+    background-color: #E20A03;
+}
+
+.--InputDatos{
+    display: none;
+    gap: 0.5rem;
+    flex-direction: column;
+    font-size: 1rem;
+}
+.--InputDatos .regresar{
+    font-size: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #0000FF;
+}
+
+.--InputDatos input{
+    border-radius: 20px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-color: #d5d5d5;
+}
+.--InputDatos button{
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    border-color: #E20A03;
+    cursor: pointer;
+}
+
+.--InputDatos button:hover{
+    color: white;
+    background-color: #E20A03;
+}
+.--InputDatos.visible{
+    display: flex;
+}
+
+.--InputDatos .botones{
+    display: flex;
+    gap: 5px;
+}
+
+.--InputDatos .botones .guardar{
+    width: 100%;
+}

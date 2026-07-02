@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="icon" type="image/png" href="iconos/logo.png">
+        <link rel="stylesheet" href="css/juegos.css"> 
+        <title>Gamer's Zone - Juegos</title> 
+    </head>
+    <body>
+        
+        <header class="menu">
+           
+            <a class="logo-titulo" href="index.html">
+                <img class="logo" src="iconos/logo.png" alt="logo">
+                <p>Inventario Gamer's Zone</p>
+            </a>
+            <div class="derecha">
+                <p id="fecha" class="fecha"></p>
+                <button class="boton-header" onclick="window.location.href='ubicacion.html';"><i class="bi bi-geo-alt-fill"></i></button>
+                <button class="boton-header" id="botonCuenta"><i class="bi bi-person-circle"></i></button>
+                <nav class="nav-cuenta" id="navCuenta">
+                <ul class="cuenta-list">
+                    <li><a href="login.html">Iniciar sesión</a></li>
+                    <li><a href="">Registrarse</a></li>
+                    <li><a href="">Más información</a></li>
+                </ul>
+            </nav>
+            </div>
+            
+            
+        </header>
+        <div class="menu-principal" id="principal">
+            <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
+            <nav class="nav" id="nav">
+                <div class="header-menu">
+                    <p class="titulo">Menú</p>
+                    <button id="cerrar" class="cerrar-menu"><i class="bi bi-x"></i></button>
+                </div>
+                <p class="titulo">Acciones rápidas</p>
+                <div class="nav-list">
+                    <div class="divAccion" onclick="window.location.href='reporte.html';">
+                        <a>Reporte general</a>
+                        <button class="chevron"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                    <div class="divAccion">
+                        <a href="">Imprimir notas</a>
+                        <button class="chevron"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                    <p class="titulo">Clientes</p>
+                    <div class="divAccion">
+                        <a href="">Contactos</a>
+                        <button class="chevron"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                    <div class="divAccion">
+                        <a href="">Apartados</a>
+                        <button class="chevron"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                    <div class="divAccion">
+                        <a href="">Cambios</a>
+                        <button class="chevron"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                </div>
+            </nav>
+            <nav class="nav-bar">
+                <ul class="list-nav-bar">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="consolas.html">Consolas</a></li>
+                    <li><a href="#" class="activo">Juegos</a></li>
+                    <li><a href="figuras.html">Figuras</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                    <li><a href="juguetes.html">Juguetes</a></li>
+                    <li><a href="cartas.html">Cartas</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="contenedor-principal">
+            <!-- Filtro de la parte izquierda-->
+            <div class="filtro">
+                <!-- Disponibilidad menú desplegable -->
+                <div class="menu-desplegable" id="abrirDisp">
+                    <p class="titulo">Por disponibilidad</p>
+                    <button><i class="bi bi-chevron-down"></i></button>
+                </div>
+                
+                <div class="opcion-toggle" id="dispToggle">
+                    <input type="checkbox" id="test" class="toggle">
+                <label for="test" class="label">
+                    <div class="ball"></div>
+                </label>
+                <p>Mostrar productos agotados</p>
+                </div>
+                <hr class="separacion">
+
+                <!-- Categorías menú desplegable -->
+                <div class="menu-desplegable" id="abrirCat">
+                    <p class="titulo">Por categoría</p>
+                    <button><i class="bi bi-chevron-down"></i></button>
+                </div>
+                <div class="cont-categorias" id="cat">
+                    <div class="busqueda">
+                    <button class="boton"><i class="bi bi-search"></i></button>
+                    <input type="search" class="barra" placeholder="Por categoría">
+
+                    </div>
+                    <div class="categorias">
+                        <input type="checkbox">
+                        <p>Acción</p>
+                    </div>
+                </div>
+                <hr class="separacion">
+
+                <!-- Precios menú desplegable -->
+                <div class="menu-desplegable" id="abrirPrec">
+                    <p class="titulo">Por precios</p>
+                    <button><i class="bi bi-chevron-down"></i></button>
+                </div>
+                
+                <div class="porPrecio" id="prec">
+                    <input type="number" placeholder="Minímo">
+                    <p>a</p>
+                    <input type="number" placeholder="Máximo">
+                    <button><i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
+                <hr class="separacion">
+
+                <!-- Almacenamiento menú desplegable -->
+
+                <div class="menu-desplegable" id="abrirAlmac">
+                    <p class="titulo">Almacenamiento</p>
+                    <button><i class="bi bi-chevron-down"></i></button>
+                </div>
+
+                <div class="almacenamiento" id="almac">
+                    <div class="busqueda">
+                    <button class="boton"><i class="bi bi-search"></i></button>
+                    <input type="search" class="barra" placeholder="Almacenamiento">
+                    </div>
+                    <div class="categorias">
+                        <input type="checkbox">
+                        <p>500GB+</p>
+                    </div>
+                </div>
+                
+                <hr class="separacion">
+                <!-- consola menú desplegable -->
+                
+                <div class="menu-desplegable" id="abrirConsola">
+                    <p class="titulo">Consola</p>
+                    <button><i class="bi bi-chevron-down"></i></button>
+                </div>
+
+                <div class="consola" id="consola">
+                    <div class="busqueda">
+                    <button class="boton"><i class="bi bi-search"></i></button>
+                    <input type="search" class="barra" placeholder="Consola">
+                    </div>
+                    <div class="categorias">
+                        <input type="checkbox">
+                        <p>Blanco</p>
+                    </div>
+                </div>
+
+                <hr class="separacion">
+
+                <!-- Condición menú desplegable -->
+                 <div class="menu-desplegable" id="abrirCond">
+                    <p class="titulo">Condición</p>
+                    <button><i class="bi bi-chevron-down"></i></button>
+                 </div>
+                 <div class="condicion" id="cond">
+                    <div class="categorias">
+                        <input type="checkbox">
+                        <p>Nuevo</p>
+                    </div>
+                 </div>
+             
+            </div>
+            <!-- Contenedor principal de productos-->
+            <div class="contenedor-productos">
+                
+                <div class="busqueda-productos">
+                    <button class="boton"><i class="bi bi-search"></i></button>
+                    <input type="search" class="barra" placeholder="Buscar juegos...">
+                </div>
+                <div class="productos-principal">
+                    
+                    <div class="productos">
+                        <img src="iconos/juego.jfif">
+                        <div class="info">
+                            <p class="subtitulo">Switch Juegos</p>
+                            <p class="titulo">Mario + Rabbids: Sparks of Hope</p>
+                            
+                        </div>
+                        <div class="precarro">
+                                <p class="precio">$600</p>
+                                <div class="icono-contenedor" id="abrirCarrito">
+                                    <button class="icono-original"><i class="bi bi-cart"></i></button>
+                                    <button class="icono-hover"><i class="bi bi-cart-check"></i></button>
+                                </div>
+                                
+                            </div>
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+        <div class="alerta" id="alert">
+            <p>Producto agregado al carrito con éxito</p>
+            <div class="icono-contenedor">
+                <button class="icono-original"><i class="bi bi-cart"></i></button>
+                <button class="icono-hover"><i class="bi bi-cart-check"></i></button>
+            </div>
+            <a href="index.html" class="titulo">Ir a Inicio</a>
+            
+            <a id="cerrarAlert" class="cerrar-alerta">Seguir viendo productos</a>
+        </div>
+        <script src="scripts/juegos.js"></script>
+    </body>
+</html>

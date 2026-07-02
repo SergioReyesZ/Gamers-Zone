@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.contenedor{
+    background-image: url(../iconos/background.jpg);
+    background-size: contain;
+    background-color: rgba(39, 39, 39, 0.6);
+    background-blend-mode: darken;
+}
+.logo-titulo{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+.logo{
+    max-width: 5rem;
+}
+
+.derecha{
+    gap: 1rem;
+    right: 0;
+    padding: 1rem;
+    margin-left: auto;
+    display: flex;
+}
+.boton-header{
+    border: 0;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.menu{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    background-color: #E20A03;
+    color: white;
+}
+.menu i, a, .logo-titulo{
+    color: white;
+}
+.header-menu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.nav-cuenta{
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 30px;
+    margin-top: 80px;
+    background-color: #343434;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.nav-cuenta.visible{
+    opacity: 1;
+    visibility: visible;
+}
+
+.cuenta-list{
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem;
+}
+.cuenta-list a{
+    padding: 1rem;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+.cuenta-list a:hover{
+    border-radius: 20px;
+    background-color: #202020;
+    color: red;
+}
+
+.contenedor-principal{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 10px;
+    width: 100%;
+    height: 70vh;
+    padding: 10px;
+}
+.-titulo-back{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.-titulo-back .boton{
+    border: transparent;
+    background-color: transparent;
+}
+
+.-titulo-back i{
+    color: black;
+    font-size: 2rem;
+}
+
+.-titulo-back h1{
+    font-size: 2rempx;
+    font-weight: 400;
+    margin-left: 2%;
+}
+
+iframe{
+    margin-left: 5%;
+}
+
+.mapa{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mapa .direccion{
+    font-size: 20px;
+}
+
+.direccion .fb{
+    color: #365494;
+}
+
+.numero{
+    
+    text-decoration: none;
+    color: black;
+}
+
+.numero.whatsapp i{
+    color: green;
+
+}
