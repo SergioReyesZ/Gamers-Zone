@@ -26,6 +26,9 @@ html, body {
     margin-left: auto;
     display: flex;
 }
+.derecha i{
+    color: black;
+}
 .boton-header{
     border: 0;
     font-size: 2rem;
@@ -39,6 +42,17 @@ html, body {
     align-items: center;
     background-color: #ececec;
     
+}
+
+.menu-telefono{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    display: none;
+    background-color: #ececec;
+}
+.menu-telefono .logo{
+    max-width: 4rem;
 }
 
 .abrir-menu{
@@ -168,11 +182,27 @@ html, body {
     border-color: transparent; /* O puedes usar 'border: none;' */
 }
 
+.nav-bar-telefono{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye el espacio automáticamente */
+    width: 100%; /* Obliga al contenedor a usar todo el ancho de la pantalla */
+    padding: 0 20px; /* Opcional: da un poco de respiro en los bordes izquierdo y derecho */
+    box-sizing: border-box; /* Asegura que el padding no desborde el ancho del 100% */
 
+}
+.nav-bar-telefono button{
+    background-color: transparent;
+    border: none;
+}
+.nav-bar-telefono button i{
+    color: white;
+    font-size: 3rem;
+}
 .list-nav-bar{
     display: flex;
     list-style-type: none;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 .list-nav-bar a{
@@ -494,40 +524,23 @@ th {
     width: 100%;
 }
 .menu{
-    font-size: 1rem;
+    display: none;
 }
-.logo{
-    max-width: 3rem;
-}
-
-.derecha{
-    gap: 0.5;
-    right: 0;
-    text-align: end;
-    padding: 0.5rem;
-}
-.boton-header{
-    border: 0;
-    font-size: 1.5rem;
-    background-color: transparent;
-    cursor: pointer;
+.menu-telefono{
+    display: flex;
 }
 
 .menu-principal{
-    font-size: 1rem;
+    display: flex;
 }
 
+
 .nav-bar {
-        flex: 1; /* Toma solo el espacio sobrante sin encimarse al botón del menú */
-        overflow-x: auto;
-        overflow-y: hidden; /* Elimina por completo el movimiento hacia arriba y abajo */
-        touch-action: pan-x; /* Le dice a la pantalla táctil: "aquí solo se desliza de lado a lado" */
-    }
-    
-    /* Oculta la barra de desplazamiento para que se vea más limpio */
-    .nav-bar::-webkit-scrollbar {
-        display: none;
-    }
+    display: none;
+}
+.abrir-menu i{
+    font-size: 3rem;
+}
 
 .list-nav-bar{
     gap: 0;
@@ -559,47 +572,15 @@ th {
 }
 
 .busqueda{
-    white-space: normal;
-    padding: 0.5rem;
-    overflow-wrap: break-word; 
-  word-break: break-word;   
-}
-.busqueda p{
-    font-size: 1rem;
-}
-.buscar{
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    padding: 5px;
+    display: none;
 }
 
-.boton-escanear, .boton-filtrar{
-    font-size: 2rem;
-    color: black;
-}
-
-.check-op{
-    margin-top: 0.1rem;
-}
-.check-op input{
-    width: 1rem;
-    height: 1rem;
-}
-
-.check-op label{
-    font-size: 0.6rem;
-    
-}
-
-.busqueda-opc{
-    gap: 0.2rem;
-}
 
 .contenedor-izquierda{
     width: 100%;
 }
 .carrito{
-    width: 100%;
+    display: none;
 }
 
 }
