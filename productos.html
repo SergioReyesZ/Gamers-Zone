@@ -1,11 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamer's Zone - Productos</title>
-</head>
-<body>
-    
-</body>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="css/productos.css">       
+        <title>Gamer's Zone - Inicio</title> 
+        <link rel="icon" type="image/png" href="iconos/logo.png">
+    </head>
+    <body>
+        <header class="menu">
+           
+            <img class="logo" src="iconos/logo.png" alt="logo">
+            <p>Inventario Gamer's Zone</p>
+            <div class="derecha">
+                <p id="fecha" class="fecha"></p>
+                <button class="boton-header" onclick="window.location.href='ubicacion.html';"><i class="bi bi-geo-alt-fill"></i></button>
+                
+            </nav>
+            </div>
+            
+            
+        </header>
+        <header class="menu-telefono">
+           
+            <img class="logo" src="iconos/logo.png" alt="logo">
+            <p>Inventario Gamer's Zone</p>
+            <div class="derecha">
+                <p id="fecha" class="fecha"></p>
+                <button class="boton-header" onclick="window.location.href='ubicacion.html';"><i class="bi bi-geo-alt-fill"></i></button>
+            </nav>
+            </div>
+            
+            
+        </header>
+        <div class="menu-principal" id="principal">
+            <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
+            <nav class="nav" id="nav">
+                <div class="header-menu">
+                    <p class="titulo">Menú</p>
+                    <button id="cerrar" class="cerrar-menu"><i class="bi bi-x"></i></button>
+                </div>
+                <p class="titulo" id="titulo">Acciones rápidas</p>
+                <div class="--InputDatos" id="Input-datos">
+                    <a id="regresar" class="regresar">Regresar al menú</a>
+                    <form action="" id="DatosCliente">
+                        <p>Nombre</p>
+                        <input type="text" maxlength="100">
+                        <p>Teléfono</p>
+                        <input type="tel" maxlength="10">
+                        <p>Celular</p>
+                        <input type="tel" maxlength="10">
+                        <p>Correo</p>
+                        <input type="email" name="" maxlength="100">
+                    </form>
+                    
+                    <p></p>
+                    <div class="botones">
+                        <button id="borrar"><i class="bi bi-eraser"></i></button>
+                        <button class="guardar">Guardar</button>
+                    </div>
+                    
+                </div>
+
+                <div class="nav-list" id="nav-list">
+                    <div class="divAccion" id="abrirDatoscliente">
+                        <a>Guardar datos cliente</a>
+                        <button class="chevron"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                    
+                    <div class="divAccion" onclick="window.location.href='reporte.html';">
+                        <a>Reporte general</a>
+                        <button class="chevron"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                    <div class="divAccion">
+                        <a>Imprimir notas</a>
+                        <button class="chevron"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                    <p class="titulo">Clientes</p>
+                    <div class="divAccion" onclick="window.location.href='contactos.html';">
+                        <a>Contactos</a>
+                        <button class="chevron"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                    <div class="divAccion" onclick="window.location.href='apartados.html';">
+                        <a>Apartados</a>
+                        <button class="chevron"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                    <div class="divAccion">
+                        <a>Cambios</a>
+                        <button class="chevron"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                    <div class="divAccion" onclick="window.location.href='valetienda.html';">
+                        <a>Vale de tienda</a>
+                        <button class="chevron"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                </div>
+            </nav>
+            <nav class="nav-bar">
+                <ul class="list-nav-bar">
+                    <li><a href="index.html" class="activo">Inicio</a></li>
+                    <li><a href="consolas.html">Consolas</a></li>
+                    <li><a href="juegos.html">Juegos</a></li>
+                    <li><a href="figuras.html">Figuras</a></li>
+                    <li><a href="accesorios.html">Accesorios</a></li>
+                    <li><a href="juguetes.html">Juguetes</a></li>
+                    <li><a href="cartas.html">Cartas</a></li>
+                </ul>
+            </nav>
+            <nav class="nav-bar-telefono">
+                <a href="index.html"><button ><i class="bi bi-house"></i></button></a>
+                <a href="productos.html"><button ><i class="bi bi-controller"></i></button></a>
+                <a href="carrito.html"><button><i class="bi bi-cart4"></i></button></a>
+                <a href="cuenta.html" class="activo"><button><i class="bi bi-person-circle"></i></button></a>
+                    
+            </nav>
+        </div>
+
+        <div class="contenedor">
+            <div class="bloque consolas" onclick="window.location.href='consolas.html';">
+                <p>Consolas</p>
+            </div>
+            <div class="bloque juegos" onclick="window.location.href='juegos.html';">
+                <p>Juegos</p>
+            </div>
+            <div class="bloque figuras"  onclick="window.location.href='figuras.html';">
+                <p>Figuras</p>
+            </div>
+            <div class="bloque accesorios" onclick="window.location.href='accesorios.html';">
+                <p>Accesorios</p>
+            </div>
+            <div class="bloque juguetes" onclick="window.location.href='juguetes.html';">
+                <p>Juguetes</p>
+            </div>
+            <div class="bloque cartas"  onclick="window.location.href='cartas.html';">
+                <p>Cartas</p>
+            </div>
+        </div>
+
+        <script src="scripts/productos.js"></script>
+    </body>
 </html>
