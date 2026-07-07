@@ -183,12 +183,12 @@ html, body {
 }
 
 .nav-bar-telefono{
-    display: flex;
+    display: none;
     align-items: center;
-    justify-content: space-between; /* Distribuye el espacio automáticamente */
-    width: 100%; /* Obliga al contenedor a usar todo el ancho de la pantalla */
-    padding: 0 20px; /* Opcional: da un poco de respiro en los bordes izquierdo y derecho */
-    box-sizing: border-box; /* Asegura que el padding no desborde el ancho del 100% */
+    justify-content: space-between; 
+    width: 100%; 
+    padding: 0 20px; 
+    box-sizing: border-box; 
 
 }
 .nav-bar-telefono button{
@@ -582,5 +582,7 @@ th {
 .carrito{
     display: none;
 }
-
+.nav-bar-telefono{
+    display: flex;
+}
 }
