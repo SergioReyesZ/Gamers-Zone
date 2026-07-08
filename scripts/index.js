@@ -161,3 +161,9 @@ document.addEventListener("click", (evento) =>{
         divFiltro.classList.remove("visible");
     }
 });
+
+const borrador = document.querySelector('#remove');
+const barraInput = document.querySelector('#barra');
+borrador.addEventListener('click', ()=>{
+        barraInput.value = '';
+    });

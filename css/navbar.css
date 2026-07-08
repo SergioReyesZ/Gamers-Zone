@@ -4,16 +4,6 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-html, body {
-    max-width: 100%;
-    overflow-x: hidden; /* Corta cualquier elemento que intente salirse por los lados */
-}
-.contenedor{
-    background-image: url(../iconos/background.jpg);
-    background-size: contain;
-    background-color: rgba(39, 39, 39, 0.6);
-    background-blend-mode: darken;
-}
 
 .logo{
     max-width: 5rem;
@@ -26,9 +16,11 @@ html, body {
     margin-left: auto;
     display: flex;
 }
+
 .derecha i{
     color: black;
 }
+
 .boton-header{
     border: 0;
     font-size: 2rem;
@@ -177,11 +169,6 @@ html, body {
     font-size: 25px;
 }
 
-.busqueda input:focus{
-    outline: none;
-    border-color: transparent; /* O puedes usar 'border: none;' */
-}
-
 .nav-bar-telefono{
     display: none;
     align-items: center;
@@ -220,6 +207,7 @@ html, body {
 .list-nav-bar .activo{
     border-radius: 20px;
     background-color: #ff1209;
+    
 }
 
 .list-nav-bar a:hover{
@@ -361,22 +349,6 @@ html, body {
     width: 70%;
 }
 
-.contenedor{
-    padding: 0.5rem;
-    flex-direction: column;
-}
-
-.busqueda{
-    display: none;
-}
-
-
-.contenedor-izquierda{
-    width: 100%;
-}
-.carrito{
-    display: none;
-}
 .nav-bar-telefono{
     display: flex;
 }
