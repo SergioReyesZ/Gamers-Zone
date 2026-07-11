@@ -205,15 +205,13 @@
 }
 
 .list-nav-bar .activo{
-    border-radius: 20px;
-    background-color: #ff1209;
-    
+    text-decoration: underline;
+    text-underline-offset: 0.5em;
 }
 
 .list-nav-bar a:hover{
-    border-radius: 20px;
-    background-color: #ff1209;
-    color: white;
+    text-decoration: underline;
+    text-underline-offset: 0.5em;
 }
 
 .nav-cuenta{
@@ -299,10 +297,34 @@
 .--InputDatos .botones .guardar{
     width: 100%;
 }
+.menu-telefono.switch{
+    background-color: #E20A03;
+    color: white;
+}
+.menu-telefono.switch i{
+    color: white;
+}
 
+.titulo-logo{
+    display: flex;
+    color: black;
+    align-items: center;
+    text-decoration: none;
+}
+.menu-telefono.switch .titulo-logo{
+    
+    color: white;
+}
 /* --- Adaptación para celulares (Responsive Design) --- */
 
 @media (max-width: 768px) {
+    body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 .contenedor{
     width: 100%;
 }
@@ -352,4 +374,8 @@
 .nav-bar-telefono{
     display: flex;
 }
+}
+
+.menu-principal.ocultar{
+    display: none;
 }
