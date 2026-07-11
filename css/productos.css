@@ -3,16 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    
 }
 html, body {
     max-width: 100%;
     overflow-x: hidden; /* Corta cualquier elemento que intente salirse por los lados */
-}
-.contenedor{
-    background-image: url(../iconos/background.jpg);
-    background-size: contain;
-    background-color: rgba(39, 39, 39, 0.6);
-    background-blend-mode: darken;
 }
 
 .logo{
@@ -236,7 +231,11 @@ html, body {
     padding-top: 1.5rem; 
     padding: 20px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.3fr 0.3fr 0.3fr;
+    grid-template-rows: auto 1fr 1fr 1fr; 
+    background-image: url(../iconos/background-2.jpeg);
+    background-size: contain;
+    background-color: rgba(39, 39, 39, 0.6);
+    background-blend-mode: darken;
 }
 
 
@@ -258,7 +257,7 @@ html, body {
 .bloque.consolas{
     background-image: url(../iconos/nintendo_switch2.jfif);
     background-size: contain;
-    background-color: rgba(39, 39, 39, 0.6);
+    background-color: rgba(39, 39, 39, 0.4);
     background-blend-mode: darken;
 }
 
@@ -274,7 +273,7 @@ html, body {
 .bloque.juegos{
     background-image: url(../iconos/juego.jfif);
     background-size: cover;
-    background-color: rgba(39, 39, 39, 0.6);
+    background-color: rgba(39, 39, 39, 0.4);
     background-blend-mode: darken;
 }
 
@@ -290,7 +289,7 @@ html, body {
 .bloque.figuras{
      background-image: url(../iconos/figura.avif);
     background-size: cover;
-    background-color: rgba(39, 39, 39, 0.6);
+    background-color: rgba(39, 39, 39, 0.4);
     background-blend-mode: darken;
 }
 
@@ -306,7 +305,7 @@ html, body {
 .bloque.accesorios{
      background-image: url(../iconos/cargador.avif);
     background-size: cover;
-    background-color: rgba(39, 39, 39, 0.6);
+    background-color: rgba(39, 39, 39, 0.4);
     background-blend-mode: darken;
 }
 
@@ -322,7 +321,7 @@ html, body {
 .bloque.juguetes{
      background-image: url(../iconos/juguete.jfif);
     background-size: cover;
-    background-color: rgba(39, 39, 39, 0.6);
+    background-color: rgba(39, 39, 39, 0.4);
     background-blend-mode: darken;
 }
 
@@ -338,7 +337,7 @@ html, body {
 .bloque.cartas{
      background-image: url(../iconos/carta.webp);
     background-size: cover;
-    background-color: rgba(39, 39, 39, 0.6);
+    background-color: rgba(39, 39, 39, 0.4);
     background-blend-mode: darken;
 }
 
@@ -346,72 +345,36 @@ html, body {
     color: white;
     font-size: 1.5rem;
 }
-/* --- Adaptación para celulares (Responsive Design) --- */
 
-@media (max-width: 768px) {
-.contenedor{
-    width: 100%;
-}
-.menu{
-    display: none;
-}
-.menu-telefono{
+.-titulo-back{
+     grid-column: 1 / -1;
     display: flex;
+    align-items: center;
+    padding: 10px;
+    color: white;
+}
+.-titulo-back .boton{
+    border: transparent;
+    background-color: transparent;
 }
 
-.menu-principal{
-    display: flex;
-}
-
-
-.nav-bar {
-    display: none;
-}
-.abrir-menu i{
-    font-size: 3rem;
-}
-
-.list-nav-bar{
-    gap: 0;
-    display: flex;
-    align-items: center; /* Alinea los elementos al centro para evitar espacios fantasma */
-    height: 100%;
-}
-
-.list-nav-bar a{
-    white-space: nowrap;
-    font-size: 1rem;
-    padding: 0.5rem;
-}
-.abrir-menu{
-    padding: 0.5rem;
-}
-
-.abrir-menu, .cerrar-menu{
+.-titulo-back i{
+    color: white;
     font-size: 2rem;
 }
 
-.nav{
-    width: 70%;
+.-titulo-back h1{
+
+    font-size: 2rem;
+    font-weight: 400;
+    margin-left: 5%;
 }
 
-.contenedor{
-    padding: 0.5rem;
-    flex-direction: column;
-}
-
-.busqueda{
-    display: none;
-}
-
-
-.contenedor-izquierda{
-    width: 100%;
-}
-.carrito{
-    display: none;
-}
-.nav-bar-telefono{
-    display: flex;
-}
+@media (max-width: 768px) {
+    .contenedor{
+    background-image: url(../iconos/background-tel.jpeg);
+    background-size: contain;
+    background-color: rgba(39, 39, 39, 0.6);
+    background-blend-mode: darken;
+    }
 }

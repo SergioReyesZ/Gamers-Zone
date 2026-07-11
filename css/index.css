@@ -47,7 +47,6 @@ html, body {
 
 .busqueda-opc{
     display: flex;
-    gap: 1rem;
     align-items: center;
 }
 
@@ -158,6 +157,12 @@ th {
     height: 20px;
 }
 
+.check-op.telefono input{
+    accent-color: red;
+    width: 20px;
+    height: 20px;
+}
+
 .check-op label{
     font-size: 20px;
 }
@@ -166,17 +171,18 @@ th {
     position: relative;
     display: inline-block;
 }
-
+.check-op.telefono {
+    display: none;
+}
 .filtro{
     opacity: 0;
     visibility: hidden;
     position: absolute;
     display: flex;
     flex-direction: column;
-    background-color: rgba(39, 39, 39, 0.6);
+    background-color: rgba(23, 23, 23, 0.9);
     bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%); 
+    transform: translateX(-85%); 
     z-index: 10; 
     padding: 20px;
     border-radius: 20px;
@@ -187,29 +193,55 @@ th {
     visibility: visible;
 }
 
-.filtro label{
+.filtro p{
     color: white;
 }
 
 .filtro input{
-
     border-radius: 20px;
-    padding: 5px;
+    padding: 2px;
+    font-size: 1rem;
 }
 
 .f-precio{
     gap: 5px;
-    margin-top: 5px;
+    padding: 5px;
     display: flex;
     align-items: center;
 }
 
-.f-precio button{
+.f-precio .check{
     background-color: transparent;
     color: white;
     font-size: 30px;
     border: transparent;
     cursor: pointer;
+}
+
+.f-precio.hijo input{
+    background-color: transparent;
+    border: none;
+}
+
+.f-precio.hijo{
+    cursor: text;
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: start;
+    gap: 0;
+}
+
+.f-precio.hijo i{
+    font-size: 1rem;
+    color: black;
+}
+
+.f-precio.hijo a{
+    background-color: transparent;
+    border: none;
+    align-items: end;
 }
 
 .venta-end{
@@ -233,7 +265,8 @@ th {
     display: flex;
     gap: 5%;
     padding: 20px;
-    width: 80%;
+    cursor: text;
+    width: 100%;
 }
 
 .buscar .boton{
@@ -286,7 +319,6 @@ th {
 .buscar{
     font-size: 1rem;
     padding: 0.7rem;
-    
 }
 
 .boton-escanear, .boton-filtrar{
@@ -302,8 +334,25 @@ th {
 .check-op{
     display: none;
 }
-
 .filtro{
-    background-color: rgba(226, 226, 226, 0.6);
+        top: 100%;
+        bottom: auto;
 }
+
+.filtro input{
+    padding: 10px 5px;
+    display: flex;
+    width: 4.5rem;
+    font-size: 0.9rem;
+}
+.check-op.telefono{
+    display: block;
+}
+
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    gap: 1em;
 }

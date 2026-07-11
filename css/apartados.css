@@ -101,10 +101,16 @@
     display: flex;
     align-items: center;
     padding: 10px;
+    justify-content: space-between;
 }
 .-titulo-back .boton{
     border: transparent;
     background-color: transparent;
+    cursor: pointer;
+}
+
+.-titulo-back .boton:hover i{
+    color: #ff1209;
 }
 
 .-titulo-back i{
@@ -170,12 +176,14 @@ th {
     gap: 5%;
     padding: 10px;
     justify-content: space-between;
+    cursor: text;
 }
 
 .busqueda .boton{
     font-size: 20px;
     background-color: transparent;
     border: transparent;
+    cursor: pointer;
 }
 
 .busqueda .barra{
