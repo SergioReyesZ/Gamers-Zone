@@ -214,6 +214,8 @@
     text-underline-offset: 0.5em;
 }
 
+
+
 .nav-cuenta{
     opacity: 0;
     visibility: hidden;
@@ -297,11 +299,22 @@
 .--InputDatos .botones .guardar{
     width: 100%;
 }
+.menu.switch{
+    background-color: #E20A03;
+    color: white;
+}
+.menu.switch a{
+    color: white;
+}
 .menu-telefono.switch{
     background-color: #E20A03;
     color: white;
 }
+
 .menu-telefono.switch i{
+    color: white;
+}
+.menu.switch .derecha button i{
     color: white;
 }
 

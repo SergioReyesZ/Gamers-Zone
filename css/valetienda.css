@@ -101,15 +101,27 @@
     display: flex;
     align-items: center;
     padding: 10px;
+    justify-content: space-between;
 }
 .-titulo-back .boton{
     border: transparent;
     background-color: transparent;
+    cursor: pointer;
+}
+
+.-titulo-back .boton:hover i{
+    color: #ff1209;
 }
 
 .-titulo-back i{
     color: black;
     font-size: 2rem;
+}
+
+.-titulo-back h1{
+    font-size: 2rempx;
+    font-weight: 400;
+    margin-left: 2%;
 }
 
 .-titulo-back h1{

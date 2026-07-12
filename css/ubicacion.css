@@ -109,13 +109,14 @@ iframe{
 
 .contacto.whatsapp{
     cursor: pointer;
-    background-color: green;
+    background-color: #25d366;
     border-radius: 20px;
     padding: 1rem;
     display: flex;
     gap: 0.5rem;
     color: white;
     width: fit-content;
+    font-weight: bold;
 }
 @media (max-width: 768px) {
     .mapa{
