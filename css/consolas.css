@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
 .filtro{
     position: sticky;
     top: 0px;
@@ -14,6 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    background-color: #ececec;
     overflow-y: auto;
     overflow-x: hidden;
     gap: 10px;
@@ -325,7 +327,7 @@
 
 .busqueda-productos .barra:focus{
     outline: none;
-  border-color: transparent; /* O puedes usar 'border: none;' */
+  border-color: transparent; 
 }
 
 .productos img{
@@ -476,7 +478,6 @@
     font-size: 100px;
     padding: 10px;
     border-radius: 20px;
-    color: black;
 }
 
 .alerta .titulo{
@@ -583,7 +584,35 @@
     
 }
 
+.-titulo-back{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    
+}
+.-titulo-back .boton{
+    align-items: center;
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    
+}
 
+.-titulo-back .boton:hover i{
+    color: #ff1209;
+}
+
+.-titulo-back i{
+    color: black;
+    font-size: 2rem;
+}
+
+.-titulo-back h1{
+    font-size: 2rempx;
+    font-weight: 400;
+    margin-left: 2%;
+}
 
 @media (max-width: 768px) {
     .contenedor-principal{
@@ -597,14 +626,14 @@
         background-color: transparent;
         margin: 0 auto;
         width: 90%;
-        order: 3;
+        order: 4;
     }
     .filtro.visible{
         display: flex;
     }
     .menu-desplegable.abrir{
         display: flex;
-        order: 2;
+        order: 3;
         width: 90%;
         margin: 0 auto;
         margin-top: 1rem;
@@ -613,7 +642,7 @@
         display: contents; 
     }
     .busqueda-productos {
-        order: 1;
+        order: 2;
         margin: 0 auto;
         margin-top: 1rem;
         width: 90%;
@@ -622,7 +651,7 @@
         justify-content: center;
     }
     .productos-principal { 
-        order: 3;
+        order: 5;
         width: 100%;
         gap: 0.5rem;
         justify-content: center;
@@ -634,7 +663,13 @@
         padding: 0.5rem;
         width: 45%;
     }
+    .-titulo-back{
+        order: 1;
+        display: flex;
+    }
 }
+
+
 
 
 button, 

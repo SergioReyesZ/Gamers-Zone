@@ -104,9 +104,11 @@
     justify-content: space-between;
 }
 .-titulo-back .boton{
+    align-items: center;
     border: transparent;
     background-color: transparent;
     cursor: pointer;
+    
 }
 
 .-titulo-back .boton:hover i{

@@ -158,6 +158,15 @@ const color = document.querySelector('#color');
 const abrirCondicion = document.querySelector('#abrirCond');
 const condicion = document.querySelector('#cond');
 
+//Constante de menú desplegable de filtro
+const abrirFiltro = document.querySelector('#abrirFiltro');
+const filtro = document.querySelector('#filtro');
+
+abrirFiltro.addEventListener('click', ()=>{
+    filtro.classList.toggle("visible");
+    abrirFiltro.classList.toggle("activo");
+})
+
 //Evento menús desplegables
 abrirDispo.addEventListener('click', ()=>{
     dispo.classList.toggle("visible");    
@@ -207,14 +216,17 @@ document.addEventListener("click", (evento) =>{
 
 });
 
-const carrito = document.querySelector('#abrirCarrito');
+const carrito = document.querySelectorAll('.abrirCarrito');
 const divalerta = document.querySelector('#alert');
 const cerrarAlerta = document.querySelector('#cerrarAlert');
-carrito.addEventListener("click", (evento)=>{
-    evento.stopPropagation();
-    divalerta.classList.add("visible");
+
+carrito.forEach((boton) => {
+    boton.addEventListener("click", (evento) => {
+        evento.stopPropagation();
+        divalerta.classList.add("visible");
+    });
 });
 
-cerrarAlerta.addEventListener("click", ()=>{
+cerrarAlerta.addEventListener("click", () => {
     divalerta.classList.remove("visible");
-})
+});

@@ -10,9 +10,18 @@
     </head>
     <body>
         <div id="navbar-placeholder"></div>
+        <div class="-titulo-back">
+                <button class="boton"><a href="javascript:history.back()"><i class="bi bi-arrow-left"></i></a></button>
+                <h1>Figuras</h1>
+                <button class="boton agregar"><i class="bi bi-plus"></i></button>
+            </div>
         <div class="contenedor-principal">
             <!-- Filtro de la parte izquierda-->
-            <div class="filtro">
+             <div class="menu-desplegable abrir" id="abrirFiltro">
+                    <p class="titulo">Filtrar</p>
+                    <button><i class="bi bi-chevron-down"></i></button>
+            </div>
+            <div class="filtro" id="filtro">
                 <!-- Disponibilidad menú desplegable -->
                 <div class="menu-desplegable" id="abrirDisp">
                     <p class="titulo">Por disponibilidad</p>
@@ -145,7 +154,37 @@
                             <p class="titulo">Link The Legend Of Zelda </p>
                             <div class="precarro">
                                 <p class="precio">$1200</p>
-                                <div class="icono-contenedor" id="abrirCarrito">
+                                <div class="icono-contenedor abrirCarrito">
+                                    <button class="icono-original"><i class="bi bi-cart"></i></button>
+                                    <button class="icono-hover"><i class="bi bi-cart-check"></i></button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productos">
+                        <img src="iconos/figura.avif">
+                        <div class="info">
+                            <p class="subtitulo">Figuras</p>
+                            <p class="titulo">Link The Legend Of Zelda </p>
+                            <div class="precarro">
+                                <p class="precio">$1200</p>
+                                <div class="icono-contenedor abrirCarrito">
+                                    <button class="icono-original"><i class="bi bi-cart"></i></button>
+                                    <button class="icono-hover"><i class="bi bi-cart-check"></i></button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productos">
+                        <img src="iconos/figura.avif">
+                        <div class="info">
+                            <p class="subtitulo">Figuras</p>
+                            <p class="titulo">Link The Legend Of Zelda </p>
+                            <div class="precarro">
+                                <p class="precio">$1200</p>
+                                <div class="icono-contenedor abrirCarrito">
                                     <button class="icono-original"><i class="bi bi-cart"></i></button>
                                     <button class="icono-hover"><i class="bi bi-cart-check"></i></button>
                                 </div>
