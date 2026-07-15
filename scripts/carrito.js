@@ -23,6 +23,7 @@ function marcarPaginaActiva() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Carga el archivo externo navbar.html dentro del contenedor
     fetch("navbar.html")
         .then(response => response.text())
         .then(data => {
@@ -37,15 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function inicializarMenu() {
-    const menu = document.querySelector('#principal');
-    menu.classList.add("ocultar");
-
-    const menuSwitch = document.querySelector('#menu');
-    menuSwitch.classList.add("switch")
-    
-    const menuTel = document.querySelector('#menu-telefono');
-    menuTel.classList.add("switch");
-
     const nav = document.querySelector("#nav");
     const abrir = document.querySelector("#abrir");
     const cerrar = document.querySelector("#cerrar");
@@ -67,9 +59,6 @@ function inicializarMenu() {
     if(fechaActual) {
         fechaActual.innerText = `${diasemana} ${dia} de ${mes} del ${ano}`;
     }
-
-    
-    
 
     document.addEventListener('keydown', (evento) => {
         if (evento.key === 'F2') {

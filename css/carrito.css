@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Corta cualquier elemento que intente salirse por los lados */
+}
+.contenedor{
+    background-image: url(../iconos/background-2.jpeg);
+    background-size: contain;
+    background-color: rgba(39, 39, 39, 0.6);
+    background-blend-mode: darken;
+}
+
+.contenedor{
+    display: flex;
+    gap: 5px;
+    height: 100vh;
+    padding-top: 1.5rem; 
+    padding: 20px;
+}
+
+.carrito{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(239, 236, 236, 0.8);
+    height: 100%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.carrito p{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.carrito label{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.carrito .precio{
+    display: flex;
+    margin-top: auto; 
+    justify-content: space-between;
+    width: 100%;
+    align-items: center; 
+}
+.tabla-productos{
+    background-color: rgba(239, 236, 236, 0.8);
+    border-radius: 20px;
+    margin-top: 10px;
+    flex-grow: 1; 
+    display: flex; /* Para controlar la tabla real de adentro */
+    flex-direction: column;
+    width: 100%;
+    overflow-y: auto; /* Permite el scroll vertical aquí dentro */
+    overflow-x: auto;
+}
+.tabla-productos::-webkit-scrollbar{
+    display: none;
+}
+
+.tabla-principal{
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 0; /* Esto mantiene los bordes unidos como si fuera collapse */
+    border-radius: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: inset 0 -1px 0 #ddd;
+  background-color: #f2f2f2;
+}
+
+.tb{
+    color: black;
+    border-radius: 20px;
+    padding: 10px;
+    border-color: #E20A03;
+
+}
+.tb:hover{
+    background-color: #ff1209;
+    color: white;
+    cursor: pointer;
+}
+
+.ta{
+    color: #E20A03;
+    font-style: oblique;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.ta:hover{
+    text-decoration: underline;
+    color: #ff1209;
+}
+
+.check-op{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+}
+.check-op input{
+    accent-color: red;
+    width: 20px;
+    height: 20px;
+}
+
+.check-op.telefono input{
+    accent-color: red;
+    width: 20px;
+    height: 20px;
+}
+
+.check-op label{
+    font-size: 20px;
+}
+
+.container-filtro{
+    position: relative;
+    display: inline-block;
+}
+.check-op.telefono {
+    display: none;
+}
+.filtro{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(23, 23, 23, 0.9);
+    bottom: 100%;
+    transform: translateX(-85%); 
+    z-index: 100; 
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.filtro.visible{
+    opacity: 1;
+    visibility: visible;
+}
+
+.filtro p{
+    color: white;
+}
+
+.filtro input{
+    border-radius: 20px;
+    padding: 2px;
+    font-size: 1rem;
+}
+
+.f-precio{
+    gap: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.f-precio .check{
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
+    border: transparent;
+    cursor: pointer;
+}
+
+.f-precio.hijo input{
+    background-color: transparent;
+    border: none;
+}
+
+.f-precio.hijo{
+    cursor: text;
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: start;
+    gap: 0;
+}
+
+.f-precio.hijo i{
+    font-size: 1rem;
+    color: black;
+}
+
+.f-precio.hijo a{
+    background-color: transparent;
+    border: none;
+    align-items: end;
+}
+
+.venta-end{
+    border-radius: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-color: #E20A03;
+}
+
+.venta-end:hover{
+    color: white;
+    background-color: #E20A03;
+}
+
+
+.buscar{
+    background-color: white;
+    border-radius: 20px;
+    border-color: #202020;
+    display: flex;
+    gap: 5%;
+    padding: 20px;
+    cursor: text;
+    width: 100%;
+}
+
+.buscar .boton{
+    font-size: 20px;
+    background-color: transparent;
+    border: transparent;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+.buscar .boton:hover{
+    color: red;
+}
+
+.buscar .barra{
+    background-color: transparent;
+    border: transparent;
+    font-size: 20px;
+    width: 100%;
+}
+
+/* --- Adaptación para celulares (Responsive Design) --- */
+
+@media (max-width: 768px) {
+
+.contenedor{
+    height: 100vh;
+    width: 100%;
+    padding: 0.5rem;
+    flex-direction: column;
+    background-image: url(../iconos/background-tel.jpeg);
+    background-size: contain;
+    background-color: rgba(39, 39, 39, 0.6);
+    background-blend-mode: darken;
+}
+.contenedor-izquierda{
+    width: 100%;
+    height: 100%;
+}
+
+
+}
