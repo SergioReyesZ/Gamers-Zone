@@ -149,25 +149,3 @@ function inicializarMenu() {
         document.getElementById('DatosCliente').reset();
     });
 }
-
-const fecha = new Date();
-const dia = String(fecha.getDate()).padStart(2, '0'); // Agrega el 0 si es menor a 10
-const mes = String(fecha.getMonth() + 1).padStart(2, '0'); // Suma 1 porque empieza en 0 y agrega el 0
-const ano = fecha.getFullYear();
-
-const fechaFprm = `${ano}-${mes}-${dia}`;
-//Script para el span del select
-
-const texto = document.getElementById('texto-seleccionado');
-const divCalendario = document.getElementById('div-calendario');
-const inputFecha = document.getElementById('input-fecha');
-
-texto.textContent = fechaFprm;
-
-divCalendario.addEventListener('click', ()=>{
-    inputFecha.showPicker();
-})
-
-inputFecha.addEventListener('change', function(){
-    texto.textContent = this.value;
-})

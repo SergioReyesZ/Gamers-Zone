@@ -228,6 +228,7 @@
     background-color: #343434;
     border-radius: 20px;
     padding: 10px;
+    z-index: 100;
 }
 
 .nav-cuenta.visible{
