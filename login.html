@@ -10,15 +10,23 @@
     </head>
     <body class="documento">
             <div class="login">
-                <button class="boton"><a href="javascript:history.back()"><i class="bi bi-arrow-left"></i></a></button>
-                <p class="titulo">Inicio de sesión</p>
+                <div class="-titulo-back">
+                    <button class="boton"><a href="javascript:history.back()"><i class="bi bi-arrow-left"></i></a></button>
+                    <p class="titulo">Inicio de sesión</p>
+                    <button class="boton oculto"></button>
+                </div>
+                
                 <p class="subtitulo">Nombre de usuario</p>
                 <input placeholder="Usuario">
                 <p class="subtitulo">Contraseña</p>
                 <input placeholder="Contraseña" type="password">
-                <button class="iniciar">Iniciar sesión</button>
-                <p class="subtitulo-link">No tienes cuenta? <a href="registro.html">Registrate aquí</a></p>
+                
+                <div class="-subtitulo-link">
+                    <button class="iniciar">Iniciar sesión</button>
+                    <p class="subtitulo-link">No tienes cuenta? <a href="registro.html">Registrate aquí</a></p>
                 <p class="subtitulo-link">Olvidaste tu contraseña? <a href="forgot.html">Click aquí</a></p>
+                </div>
+                
                 
             </div>
     </body>

@@ -6,7 +6,7 @@
 }
 
 .documento{
-    background-image: url(../iconos/fondo.jpg);
+    background-image: url(../iconos/background-3.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(39, 39, 39, 0.6);
@@ -23,7 +23,6 @@
     flex-direction: column;
     width: 50%;
     height: 50%;
-    margin-top: 5%;
     margin-left: 25%;
     padding: 20px;
 }
@@ -31,8 +30,8 @@
 input{
     border: white;
     border-radius: 20px;
-    padding: 20px;
-    font-size: 20px;
+    padding: 1rem;
+    font-size: 1rem;
     width: 90%;
 }
 
@@ -50,8 +49,8 @@ input{
 }
 
 .subtitulo{
-    margin-top: 20px;
-    font-size: 20px;
+    margin-top: 1rem;
+    font-size: 1rem;
     color: white;
     font-weight: bold;
 }
@@ -99,7 +98,13 @@ input{
     font-size: 30px;
 }
 
+.formulario{
+    width: 100%;
+}
 @media (max-width: 768px) {
+    .documento{
+        background-image: url(https://www.xtrafondos.com/thumbs/vertical/webp/1_12641.webp);
+    }
     .login{
         width: 80%;
         height: 80%;
