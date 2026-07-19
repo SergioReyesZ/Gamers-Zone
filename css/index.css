@@ -9,7 +9,7 @@ html, body {
     overflow-x: hidden; /* Corta cualquier elemento que intente salirse por los lados */
 }
 .contenedor{
-    background-image: url(../iconos/background-2.jpeg);
+    background-image: url(../iconos/background-2.avif);
     background-size: contain;
     background-color: rgba(39, 39, 39, 0.6);
     background-blend-mode: darken;
@@ -308,7 +308,7 @@ position: sticky;
     width: 100%;
     padding: 0.5rem;
     flex-direction: column;
-    background-image: url(../iconos/background-tel.jpeg);
+    background-image: url(../iconos/background-tel.avif);
     background-size: contain;
     background-color: rgba(39, 39, 39, 0.6);
     background-blend-mode: darken;

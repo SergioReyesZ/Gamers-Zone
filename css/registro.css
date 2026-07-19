@@ -6,10 +6,9 @@
 }
 
 .documento{
-    background-image: url(../iconos/background-3.jpeg);
+    background-image: url(../iconos/background-3.webp);
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: rgba(39, 39, 39, 0.6);
     background-blend-mode: darken;
 }
 

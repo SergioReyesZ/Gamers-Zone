@@ -255,7 +255,7 @@ html, body {
     border-radius: 10px;
 }
 .bloque.consolas{
-    background-image: url(../iconos/nintendo_switch2.jfif);
+    background-image: url(../iconos/nintendo_switch2.avif);
     background-size: contain;
     background-color: rgba(39, 39, 39, 0.4);
     background-blend-mode: darken;
@@ -271,7 +271,7 @@ html, body {
 }
 
 .bloque.juegos{
-    background-image: url(../iconos/juego.jfif);
+    background-image: url(../iconos/juego.avif);
     background-size: cover;
     background-color: rgba(39, 39, 39, 0.4);
     background-blend-mode: darken;
@@ -319,7 +319,7 @@ html, body {
 }
 
 .bloque.juguetes{
-     background-image: url(../iconos/juguete.jfif);
+     background-image: url(../iconos/juguete.avif);
     background-size: cover;
     background-color: rgba(39, 39, 39, 0.4);
     background-blend-mode: darken;
@@ -372,7 +372,7 @@ html, body {
 
 @media (max-width: 768px) {
     .contenedor{
-    background-image: url(../iconos/background-tel.jpeg);
+    background-image: url(../iconos/background-tel.avif);
     background-size: contain;
     background-color: rgba(39, 39, 39, 0.6);
     background-blend-mode: darken;

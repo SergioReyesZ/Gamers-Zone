@@ -6,7 +6,7 @@
 }
 
 .documento{
-    background-image: url(../iconos/fondo.jpg);
+    background-image: url(../iconos/fondo.avif);
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(39, 39, 39, 0.6);
@@ -100,9 +100,17 @@ input{
 }
 
 @media (max-width: 768px) {
+    .documento{
+        background-image: url(../iconos/background-3-telefono.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: rgba(39, 39, 39, 0.6);
+        background-blend-mode: darken;
+    }
+
     .login{
-        width: 80%;
-        height: 80%;
+        width: 90%;
+        height: 100vh;
         margin-top: 5%;
         margin-left: 5%;
     }
