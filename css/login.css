@@ -79,10 +79,12 @@ input{
     border-radius: 20px;
     border: white;
     width: 50%;
+    cursor: pointer;
 }
 
 .iniciar:hover{
     background-color: #ac0505;
+    
 }
 
 .boton{
@@ -98,7 +100,15 @@ input{
 .boton i{
     font-size: 30px;
 }
-
+.mensaje{
+    display: none;
+}
+.mensaje.visible{
+    display: block;
+}
+form{
+    display: contents;
+}
 @media (max-width: 768px) {
     .documento{
         background-image: url(../iconos/background-3-telefono.webp);
