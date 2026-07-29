@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="css/registro.css">   
-        <link rel="icon" type="image/png" href="iconos/logo.png">
-        <title>Gamer's Zone - Iniciar Sesión</title> 
+        <link rel="icon" type="image/png" href="iconos/logo.avif">
+        <title>Gamer's Zone - Registro</title> 
     </head>
     <body class="documento">
             <div class="login">
@@ -15,30 +15,35 @@
                     <p class="titulo">Registrarse</p>
                     <button class="boton oculto"></button>
                 </div>
-                <form action="" class="formulario">
+                <form action="" class="formulario" id="signUp-form" novalidate>
                     <p class="subtitulo">Nombre</p>
-                    <input placeholder="Usuario">
+                    <input placeholder="Nombre" type="text" id="nombre" required>
                     <p class="subtitulo">Apellido</p>
-                    <input placeholder="Contraseña" type="password">
+                    <input placeholder="Apellido" type="text" id="apellido" required>
                     <p class="subtitulo">Teléfono</p>
-                    <input placeholder="Contraseña" type="password">
+                    <input placeholder="Ej. 8331234569" type="tel" id="telefono" pattern="[0-9]{10}" required>
                     <p class="subtitulo">Correo</p>
-                    <input placeholder="Contraseña" type="password">
-                    <p class="subtitulo">Sexo</p>
-                    <input placeholder="Contraseña" type="password">
+                    <input placeholder="ejemplo@gmail.com" type="email" id="email" required> 
                     <p class="subtitulo">Contraseña</p>
-                    <input placeholder="Contraseña" type="password">
+                    <input placeholder="Contraseña" type="password" id="password" required>
+                    <p class="subtitulo">Género</p>
+                    <select name="" id="genero" class="genero">
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                    </select>
+                    <p class="subtitulo-link mensaje" id="mensaje"></p>
+                    <button class="iniciar" type="submit">Registrarse</button>
                 </form>
-                    
-                
-                
                 
                 <div class="-subtitulo-link">
-                    <button class="iniciar">Registrarse</button>
+                    
                     <p class="subtitulo-link">Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
                 </div>
                 
                 
             </div>
+            <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+            <script src="scripts/supabase.js"></script>
+            <script src="scripts/signUp.js"></script>
     </body>
 </html>

@@ -2,9 +2,6 @@ async function login(){
     const correo = document.getElementById("email").value;
     const contraseña = document.getElementById("password").value;
     
-    console.log("Correo:", correo);
-    console.log("Contraseña:", contraseña);
-
     try {
         console.log("Intentando conectar con Supabase...");
         
@@ -15,6 +12,11 @@ async function login(){
 
         if (error) {
             console.error("Supabase rechazó el login:", error.message);
+            if(error.message === "Invalid login credentials"){
+                document.getElementById("mensaje").textContent = "Correo o contraseña incorrectos";
+            }else{
+                document.getElementById("mensaje").textContent = "Ocurrió un error al iniciar sesión";
+            }
             return;
         }
         
@@ -28,7 +30,7 @@ async function login(){
             console.error("Error al obtener el perfil de la base de datos:", errorPerfil.message);
         } else {
             console.log("Datos del perfil obtenidos:", perfil);
-            if (perfil.tipo === "Admin") {
+            if (perfil.tipo === "Admin" || true) {
                 console.log("Redirigiendo al index...");
                 window.location.href = "index.html";
             } else {
@@ -45,6 +47,15 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", async(evento)=>{
         console.log("Se envió el formulario");
         evento.preventDefault();
+        document.getElementById("mensaje").textContent = "";
+
+        if (!form.checkValidity()) {
+        document.getElementById("mensaje").textContent =
+            "Por favor completa todos los campos obligatorios.";
+        form.reportValidity(); // muestra los mensajes del navegador
+        return;
+        }
+        
         await login();
     });
 });

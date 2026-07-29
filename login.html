@@ -15,12 +15,14 @@
                     <p class="titulo">Inicio de sesión</p>
                     <button class="boton oculto"></button>
                 </div>
-                <form action="" id="login-form">
+                <form action="" id="login-form" novalidate>
                     <p class="subtitulo">Correo</p>
-                    <input placeholder="Usuario" id="email" type="email">
+                    <input placeholder="Usuario" id="email" type="email" required>
                     <p class="subtitulo">Contraseña</p>
-                    <input placeholder="Contraseña" type="password" id="password">
+                    <input placeholder="Contraseña" type="password" id="password" required>
+                    <p class="subtitulo mensaje" id="mensaje"></p>
                     <button type="submit" class="iniciar">Iniciar sesión</button>
+                    
                 </form>
                 <div class="-subtitulo-link">
                     

@@ -100,11 +100,8 @@ input{
 .boton i{
     font-size: 30px;
 }
-.mensaje{
-    display: none;
-}
-.mensaje.visible{
-    display: block;
+.subtitulo.mensaje{
+    color: red;
 }
 form{
     display: contents;

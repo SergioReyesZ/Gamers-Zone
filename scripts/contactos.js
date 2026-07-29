@@ -23,14 +23,17 @@ function marcarPaginaActiva() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Carga el archivo externo navbar.html dentro del contenedor
     fetch("navbar.html")
         .then(response => response.text())
-        .then(data => {
+        .then(async (data) => {
             document.getElementById("navbar-placeholder").innerHTML = data;
 
             // Una vez que el HTML ya existe en la página, se ejecutan las funciones del menú:
             inicializarMenu();
             marcarPaginaActiva();
+
+            await actualizarCuenta();
         });
 });
 

@@ -15,6 +15,7 @@
     padding: 1rem;
     margin-left: auto;
     display: flex;
+    align-items: center;
 }
 
 .derecha i{
@@ -214,8 +215,6 @@
     text-underline-offset: 0.5em;
 }
 
-
-
 .nav-cuenta{
     opacity: 0;
     visibility: hidden;
@@ -225,7 +224,7 @@
     right: 0;
     margin-right: 30px;
     margin-top: 80px;
-    background-color: #343434;
+    background-color: #eceaea;
     border-radius: 20px;
     padding: 10px;
     z-index: 100;
@@ -239,7 +238,7 @@
 .cuenta-list{
     display: flex;
     list-style-type: none;
-    gap: 1rem;
+    gap: 5px;
     flex-direction: column;
     align-items: start;
     padding: 1rem;
@@ -248,12 +247,7 @@
     padding: 1rem;
     font-size: 20px;
     text-decoration: none;
-    color: white;
-}
-.cuenta-list a:hover{
-    border-radius: 20px;
-    background-color: #202020;
-    color: red;
+    color: black;
 }
 
 
@@ -328,6 +322,34 @@
 .menu-telefono.switch .titulo-logo{
     
     color: white;
+}
+
+.pfp{
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.usuario{
+    font-size: 1.5rem;
+    color: black;
+}
+
+.lista{
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+}
+.lista:hover{
+    background-color: #d5d5d5;
+}
+.lista i{
+    color: black;
+    font-size: 2rem;
 }
 /* --- Adaptación para celulares (Responsive Design) --- */
 
