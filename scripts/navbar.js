@@ -7,6 +7,10 @@ const cerrar = document.querySelector("#cerrar");
 const abrircuenta = document.querySelector("#botonCuenta");
 const navecuenta = document.querySelector("#navCuenta");
 
+//Abrir cuenta Teléfono
+const abrircuentaTel = document.getElementById("botonCuentaTel");
+const navecuentaTel = document.getElementById("navCuentaTel");
+
 let dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
 let meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
 
@@ -36,6 +40,7 @@ document.addEventListener('keydown', (evento) => {
 
         nav.classList.remove("visible");
         navecuenta.classList.remove("visible");
+        navecuentaTel.classList.remove("visible");
         listaNav.classList.remove("ocultar");
         inputDatos.classList.remove("visible");
         tituloNav.textContent = textoOriginal;
@@ -64,6 +69,14 @@ abrircuenta.addEventListener("click", (evento) =>
 }
 );
 
+//Cuenta teléfono
+abrircuentaTel.addEventListener("click", (evento) =>
+    {
+        evento.stopPropagation();
+    navecuentaTel.classList.toggle("visible");
+}
+);
+
 //Click afuera de los menus
 document.addEventListener("click", (evento) =>{
     if(nav.classList.contains("visible") && !nav.contains(evento.target)){
@@ -75,6 +88,10 @@ document.addEventListener("click", (evento) =>{
 
     if (navecuenta.classList.contains("visible") && !navecuenta.contains(evento.target)) {
         navecuenta.classList.remove("visible");
+    }
+
+    if (navecuentaTel.classList.contains("visible") && !navecuentaTel.contains(evento.target)) {
+        navecuentaTel.classList.remove("visible");
     }
 });
 

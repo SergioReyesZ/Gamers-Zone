@@ -47,6 +47,10 @@ function inicializarMenu() {
     const abrircuenta = document.querySelector("#botonCuenta");
     const navecuenta = document.querySelector("#navCuenta");
 
+    //Abrir cuenta telefono
+    const abrircuentaTel = document.querySelector("#botonCuentaTel");
+    const navecuentaTel = document.querySelector("#navCuentaTel");
+
     let dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
     let meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
 
@@ -80,6 +84,10 @@ function inicializarMenu() {
             listaNav.classList.remove("ocultar");
             inputDatos.classList.remove("visible");
             tituloNav.textContent = textoOriginal;
+
+            if (navecuentaTel) {
+                navecuentaTel.classList.remove("visible");
+            }
         }
     });
 
@@ -99,6 +107,12 @@ function inicializarMenu() {
         navecuenta.classList.toggle("visible");
     });
 
+    if (abrircuentaTel && navecuentaTel) {
+    abrircuentaTel.addEventListener("click", (evento) => {
+        evento.stopPropagation();
+        navecuentaTel.classList.toggle("visible");
+    });
+}
     //Click afuera de los menus
     document.addEventListener("click", (evento) =>{
         if(nav.classList.contains("visible") && !nav.contains(evento.target)){
@@ -110,6 +124,10 @@ function inicializarMenu() {
 
         if (navecuenta.classList.contains("visible") && !navecuenta.contains(evento.target)) {
             navecuenta.classList.remove("visible");
+        }
+
+        if (navecuentaTel && navecuentaTel.classList.contains("visible") &&!navecuentaTel.contains(evento.target)) {
+            navecuentaTel.classList.remove("visible");
         }
     });
 

@@ -91,6 +91,63 @@
     gap: 1rem;
 }
 
+.contenedor-principal.editar-info{
+    display: none;
+    align-items: start;
+}
+
+.contenedor-principal.ocultar{
+    display: none;
+}
+
+.contenedor-principal.editar-info.visible{
+    display: block;
+}   
+
+.contenedor-principal.editar-info p{
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+form{
+    margin-top: 2rem;
+}
+.input-icono{
+    cursor: text;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    border: black solid 2px;
+    padding: 0.5rem;
+    font-size: 2rem;
+    width: fit-content;
+}
+.input-foto p{
+    color: gray;
+}
+.input-foto{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: black dotted 2px;
+    width: 100%;
+    height: 200px;
+}
+.input-foto input{
+    font-size: 1px;
+    opacity: 0;
+}
+input{
+    border: none;
+    background-color: transparent;
+    padding: 1rem;
+    font-size: 2rem;
+}
+input:focus{
+    outline: none;
+}
 @media (max-width: 768px) {
     .contenedor-principal{
         width: 90%;

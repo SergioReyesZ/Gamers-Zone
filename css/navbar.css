@@ -177,6 +177,7 @@
     width: 100%; 
     padding: 0 20px; 
     box-sizing: border-box; 
+    position: relative;
 
 }
 .nav-bar-telefono button{
@@ -351,6 +352,7 @@
     color: black;
     font-size: 2rem;
 }
+
 /* --- Adaptación para celulares (Responsive Design) --- */
 
 @media (max-width: 768px) {
@@ -375,7 +377,10 @@
     display: flex;
 }
 
-
+.nav-cuenta{
+    top: 100%;
+    margin-top: 10px;
+}
 .nav-bar {
     display: none;
 }

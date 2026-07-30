@@ -151,3 +151,105 @@ function inicializarMenu() {
         document.getElementById('DatosCliente').reset();
     });
 }
+
+const editar = document.getElementById("editar");
+const cont = document.querySelector(".contenedor-principal");
+const contEdit = document.querySelector(".contenedor-principal.editar-info");
+const volver = document.getElementById("volver");
+
+editar.addEventListener("click", ()=>{
+    cont.classList.add("ocultar");
+    contEdit.classList.add("visible");
+});
+
+volver.addEventListener("click", ()=>{
+    cont.classList.remove("ocultar");
+    contEdit.classList.remove("visible");
+})
+
+const divInputFoto = document.getElementById("divInputFoto");
+const inputFoto = document.getElementById("inputFoto");
+
+divInputFoto.addEventListener("click", ()=>{
+    inputFoto.click();
+});
+
+mostrarInfo();
+async function mostrarInfo() {
+    const { data: { user } } = await db.auth.getUser();
+
+    if (user) {
+        const { data } = await db
+        .from("usuario")
+        .select("*")
+        .eq("id", user.id)
+        .single();
+        
+        document.getElementById("inicial").textContent = data.nombre[0];
+        document.getElementById("nombre").textContent = data.username + " " + data.apellido;
+        document.getElementById("usuario").textContent = data.nombre;
+        document.getElementById("tipo").textContent = data.tipo;
+        document.getElementById("correo").textContent = user.email;
+        document.getElementById("telefono").textContent = data.telefono;
+        if(data.sexo === "M"){
+            document.getElementById("genero").textContent = "Masculino"; 
+        }else{
+            document.getElementById("genero").textContent = "Femenino"; 
+        }
+        if (data.avatar) {
+            document.getElementById("foto").src = data.avatar;
+        } else {
+            document.getElementById("foto").src = "iconos/default.png";
+        }
+        
+    }else{
+        document.getElementById("foto").src = "iconos/default.png";
+        console.log("No hay datos, Inicie sesión.");
+    }
+}
+
+inputFoto.addEventListener("change", async (evento)=>{
+    if(evento.target.files.length > 0){
+        console.log("Subiendo archivo");
+        await cambiarFoto();
+    }
+});
+
+async function cambiarFoto() {
+    
+    const { data: { user } } = await db.auth.getUser();
+    
+    if (user) {
+        const archivoFisico = inputFoto.files[0]; 
+        if (!archivoFisico) {
+            console.error("No se seleccionó ningún archivo");
+            return;
+        }
+        const rutaArchivo = `${user.id}/${archivoFisico.name}`;
+
+        const { data: perfil, error: errorPerfil } = await db.storage.from('usuarios').upload(rutaArchivo, archivoFisico,{upsert: true})
+        if (errorPerfil) {
+        console.error("Error al subir:", errorPerfil.message);
+        } else {
+            console.log("¡Foto actualizada con éxito!", perfil);
+            const { publicUrl } = db.storage.from('usuarios').getPublicUrl(rutaArchivo).data;
+
+            console.log("URL generada para guardar:", publicUrl);
+
+            // 3. Guardar el String de la URL en la columna 'avatar' de tu tabla
+            const { error: dbError } = await db
+                .from('usuario')
+                .update({ avatar: publicUrl }) // Usar publicUrl aquí
+                .eq('id', user.id);
+
+            if (dbError) {
+                console.error("Error al actualizar la tabla usuario:", dbError.message);
+            } else {
+                console.log("¡Base de datos actualizada con éxito!");
+                await mostrarInfo();
+            }
+        }
+    }else{
+        console.log("No hay datos inicie sesión")
+    }
+}
