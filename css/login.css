@@ -28,7 +28,7 @@
     padding: 20px;
 }
 
-input{
+.input{
     border: white;
     border-radius: 20px;
     padding: 20px;
@@ -105,6 +105,47 @@ input{
 }
 form{
     display: contents;
+}
+
+.password{
+    cursor: text;
+    background-color: white;
+    border: white;
+    border-radius: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+.inputpassword{
+    outline: none;
+    border-color: transparent; /* O puedes usar 'border: none;' */
+}
+.password i{
+    font-size: 2rem;
+}
+.inputpassword{
+    background-color: transparent;
+    border: none;
+    
+    font-size: 20px;
+    width: 90%;
+}
+.ojo{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+.ojo.tachado{
+    display: none;
+}
+.ojo.ocultar{
+    display: none;
+}
+
+.ojo.tachado.visible{
+    display: block;
 }
 @media (max-width: 768px) {
     .documento{

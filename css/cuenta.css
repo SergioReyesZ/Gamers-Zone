@@ -92,8 +92,8 @@
 }
 
 .contenedor-principal.editar-info{
+    height: fit-content;
     display: none;
-    align-items: start;
 }
 
 .contenedor-principal.ocultar{
@@ -113,16 +113,25 @@ form{
     margin-top: 2rem;
 }
 .input-icono{
-    cursor: text;
     background-color: white;
-    display: flex;
-    align-items: center;
     border-radius: 20px;
-    border: black solid 2px;
-    padding: 0.5rem;
-    font-size: 2rem;
-    width: fit-content;
+    border-color: #202020;
+    display: flex;
+    gap: 5%;
+    padding: 20px;
+    cursor: text;
+    width: 100%;
+    align-items: center;
 }
+.input-foto i{
+    font-size: 1rem;
+    background-color: transparent;
+    border: transparent;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
 .input-foto p{
     color: gray;
 }
@@ -136,17 +145,38 @@ form{
     height: 200px;
 }
 .input-foto input{
+    width: 1px;
     font-size: 1px;
     opacity: 0;
 }
 input{
-    border: none;
     background-color: transparent;
-    padding: 1rem;
-    font-size: 2rem;
+    border: transparent;
+    font-size: 20px;
+    width: 100%;
 }
 input:focus{
     outline: none;
+}
+.foto-pfp{
+    width: 150;
+    height: 150;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.boton-confirmar{
+    margin-top: 1rem;
+    width: 100%;
+    border-radius: 20px;
+    padding: 1rem;
+    font-size: 2rem;
+    color: white;
+    background-color: #E20A03;
+    cursor: pointer;
+}
+.boton-confirmar:hover{
+    background-color: #ff1209;
 }
 @media (max-width: 768px) {
     .contenedor-principal{

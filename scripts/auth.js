@@ -16,6 +16,14 @@ async function mostrarUsuario(user){
         .eq("id", user.id)
         .single();
 
+        if (data.avatar) {
+            document.getElementById("fotoPerfil").src = data.avatar;
+            document.getElementById("fotoPerfilTel").src = data.avatar;
+        } else {
+            document.getElementById("fotoPerfil").src = "iconos/default.png";
+            document.getElementById("fotoPerfilTel").src = "iconos/default.png";
+    }
+    
     const nav = document.getElementById("navCuenta");
     const navTel = document.getElementById("navCuentaTel");
 
@@ -52,6 +60,7 @@ async function mostrarUsuario(user){
         location.reload();
 
     });
+    
 }
 
 function mostrarInvitado(){

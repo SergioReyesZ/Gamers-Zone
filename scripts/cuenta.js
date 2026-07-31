@@ -185,6 +185,8 @@ async function mostrarInfo() {
         .eq("id", user.id)
         .single();
         
+        document.getElementById("formCorreo").placeholder = user.email;
+        document.getElementById("formTelefono").placeholder = data.telefono;
         document.getElementById("inicial").textContent = data.nombre[0];
         document.getElementById("nombre").textContent = data.username + " " + data.apellido;
         document.getElementById("usuario").textContent = data.nombre;
@@ -239,7 +241,7 @@ async function cambiarFoto() {
             // 3. Guardar el String de la URL en la columna 'avatar' de tu tabla
             const { error: dbError } = await db
                 .from('usuario')
-                .update({ avatar: publicUrl }) // Usar publicUrl aquí
+                .update({ avatar: publicUrl })
                 .eq('id', user.id);
 
             if (dbError) {

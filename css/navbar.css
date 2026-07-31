@@ -299,7 +299,7 @@
     background-color: #E20A03;
     color: white;
 }
-.menu.switch a{
+.menu.switch .titulo{
     color: white;
 }
 .menu-telefono.switch{

@@ -17,9 +17,15 @@
                 </div>
                 <form action="" id="login-form" novalidate>
                     <p class="subtitulo">Correo</p>
-                    <input placeholder="Usuario" id="email" type="email" required>
+                    <input placeholder="Usuario" id="email" class="input" type="email" required>
                     <p class="subtitulo">Contraseña</p>
-                    <input placeholder="Contraseña" type="password" id="password" required>
+                    <div class="password" onclick="document.getElementById('password').focus()">
+                        <input placeholder="Contraseña" type="password" id="password" class="inputpassword" required>
+                        
+                        <button type="button" class="ojo"><i class="bi bi-eye"></i></button>
+                        <button type="button" class="ojo tachado"><i class="bi bi-eye-slash"></i></button>
+                    </div>
+                    
                     <p class="subtitulo mensaje" id="mensaje"></p>
                     <button type="submit" class="iniciar">Iniciar sesión</button>
                     

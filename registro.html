@@ -25,7 +25,13 @@
                     <p class="subtitulo">Correo</p>
                     <input placeholder="ejemplo@gmail.com" type="email" id="email" required> 
                     <p class="subtitulo">Contraseña</p>
-                    <input placeholder="Contraseña" type="password" id="password" required>
+                    <div class="password" onclick="document.getElementById('password').focus()">
+                        <input placeholder="Contraseña" type="password" id="password" class="inputpassword" required>
+                        
+                        <button type="button" class="ojo"><i class="bi bi-eye"></i></button>
+                        <button type="button" class="ojo tachado"><i class="bi bi-eye-slash"></i></button>
+                    </div>
+
                     <p class="subtitulo">Género</p>
                     <select name="" id="genero" class="genero">
                         <option value="M">Masculino</option>

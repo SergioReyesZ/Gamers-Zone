@@ -113,6 +113,45 @@ input{
     font-size: 1rem;
     width: 90%;
 }
+
+.password{
+    cursor: text;
+    background-color: white;
+    border: white;
+    border-radius: 20px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+.inputpassword{
+    outline: none;
+    border-color: transparent; /* O puedes usar 'border: none;' */
+}
+.password i{
+    font-size: 1.5rem;
+}
+.inputpassword{
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    width: 95%;
+}
+.ojo{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+.ojo.tachado{
+    display: none;
+}
+.ojo.ocultar{
+    display: none;
+}
+
+.ojo.tachado.visible{
+    display: block;
+}
+
 @media (max-width: 768px) {
     .documento{
         background-image: url(https://www.xtrafondos.com/thumbs/vertical/webp/1_12641.webp);

@@ -1,3 +1,20 @@
+const botonOjo = document.querySelector(".ojo");
+const botonOjoTachado = document.querySelector(".ojo.tachado");
+const inputPassword = document.getElementById("password");
+
+botonOjo.addEventListener("click", ()=>{
+    botonOjo.classList.add("ocultar");
+    botonOjoTachado.classList.add("visible");
+    inputPassword.type = "text";
+});
+
+
+    botonOjoTachado.addEventListener("click", ()=>{
+        botonOjo.classList.remove("ocultar");
+        botonOjoTachado.classList.remove("visible");
+        inputPassword.type = "password";
+    });
+
 async function registrarse(){
     
     const { data: { user } } = await db.auth.getUser();
