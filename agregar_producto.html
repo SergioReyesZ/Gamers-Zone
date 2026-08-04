@@ -16,16 +16,33 @@
                 <h1>Agregar producto</h1>
             </div>
             <div class="fotos">
-                <div class="foto"></div>
-                <div class="foto"></div>
-                <div class="foto"></div>
-                <div class="foto"></div>
-                <div class="foto"></div>
-                <div class="agregar-foto">
-                    <div class="agregar-foto icono">
+                <div class="agregar-foto" id="agregarFoto">
+                    <div class="icono">
                         <i class="bi bi-plus-square"></i>
                     </div>
+                    <input type="file" class="input-imagen" id="inputImagen" multiple accept="image/*">
                     <p>Agregar fotos</p>
+                </div>
+                <div class="foto 1" id="divFoto1">
+                    <button title="Quitar imágen" class="button"><i class="bi bi-x"></i></button>
+                    <img src="" alt="" id="img1" class="imagen">
+                </div>
+                <div class="foto 2" id="divFoto2">
+                    <button title="Quitar imágen" class="button"><i class="bi bi-x"></i></button>
+                    <img src="" alt="" id="img2" class="imagen">
+                </div>
+                <div class="foto 3" id="divFoto3">
+                    <button title="Quitar imágen" class="button"><i class="bi bi-x"></i></button>
+                    <img src="" alt="" id="img3" class="imagen">
+                </div>
+
+                <div class="foto 4" id="divFoto4">
+                    <button title="Quitar imágen" class="button"><i class="bi bi-x"></i></button>
+                    <img src="" alt="" id="img4" class="imagen">
+                </div>
+                <div class="foto 5" id="divFoto5">
+                    <button title="Quitar imágen" class="button"><i class="bi bi-x"></i></button>
+                    <img src="" alt="" id="img5" class="imagen">
                 </div>
             </div>
             <div class="informacion-producto">
@@ -33,7 +50,7 @@
                     <p class="subtitulo">Título</p>
                     <input type="text" placeholder="Nombre del producto" class="input">
                     <p class="subtitulo">Precio</p>
-                    <input type="number" placeholder="Precio" class="input">
+                    <input type="number" placeholder="Precio" class="input" inputmode="numeric">
                     <p class="subtitulo">Categoría</p>
                     <select name="Categoría" id="" class="select">
                         <option value="" selected disabled>Categoría</option>
@@ -68,6 +85,9 @@
                     
                 </form>
             </div>
+        </div>
+        <div class="div-alerta-imagen" id="divAlertaImagen">
+            <img src="" alt="" id="alertaImagen" class="alerta-imagen">
         </div>
         <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
         <script src="scripts/supabase.js"></script>

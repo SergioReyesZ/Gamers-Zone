@@ -40,33 +40,81 @@
     font-weight: 400;
     margin-left: 2%;
 }
-.fotos{
+
+.fotos {
+    gap: 1rem;
     width: 100%;
-    height: 100%;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
+    align-items: flex-start;  
+    margin-top: 2%;  
 }
+
 .agregar-foto { 
-    padding: 2rem;
     border: #d9d9d9 dotted;
-    margin-top: 5%;
-    height: 250px; 
-    aspect-ratio: 1 / 1;
+    height: 300px; 
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centra el contenido verticalmente también */
-    gap: 1rem;
+    justify-content: center; 
+    padding: 1rem;
     cursor: pointer;
+    flex-shrink: 0;
 }
-.agregar-foto:hover .agregar-foto.icono i{
+.foto {
+    cursor: pointer;
+    display: none;
+    background-color: whitesmoke;
+    height: 300px;
+    width: 200px;
+    border: none;
+    flex-shrink: 0;
+    position: relative; 
+}
+
+.imagen {
+    width: 100%;
+    height: 100%;  
+    object-fit: cover;  
+}
+
+.button {
+    position: absolute; 
+    top: 8px;    
+    right: 8px;       
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7); 
+    border-radius: 50%; 
+    width: 32px;        
+    height: 32px;      
+    display: flex;     
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.button i {
+    color: black;
+    font-size: 1.2rem; 
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.button i:hover {
+    color: #ff1209;
+}
+
+.agregar-foto:hover .icono i {
     color: #ff1209;
 }
 .agregar-foto p{
     font-size: 1.5rem;
     font-weight: 500;
 }
-.agregar-foto.icono{
+.icono{
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -75,7 +123,7 @@
     align-items: center;
     justify-content: center;
 }
-.agregar-foto.icono i{
+.icono i{
     font-size: 3rem;
     font-weight: 900;
 }
@@ -95,24 +143,27 @@
     padding: 20px;
 }
 .input{
-    border: 1px solid black;
-    width: 100%;
+    background-color: white;
     border-radius: 20px;
-    font-size: 2rem;
-    padding: 1rem;
+    border: #202020 1px solid;
+    padding: 20px;
+    width: 100%;
+    font-size: 20px;
+    width: 100%;
 }
 .select{
     border: 1px solid black;
     width: 100%;
     border-radius: 20px;
-    font-size: 2rem;
+    
+    font-size: 20px;
     padding: 1rem;
 }
 .descripcion{
     border: 1px solid black;
     width: 100%;
     border-radius: 20px;
-    font-size: 2rem;
+    font-size: 1rem;
     padding: 1rem;
     height: 200px;
 }
@@ -125,6 +176,42 @@
 .input.bar-code{
     width: 49%;
 }
+.input-imagen{
+    display: none;
+}
+.div-alerta-imagen{
+    z-index: 2000;
+    position: fixed;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    height: auto; 
+    width: 90%; 
+    
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 20px;
+    padding: 15px;
+    
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 15px;
+}
+
+.alerta-imagen {
+    width: auto;
+    height: auto;
+    max-width: 90vh;
+    max-height: 80vw;
+    object-fit: contain; 
+    border-radius: 10px;
+}
 /* --- Adaptación para celulares (Responsive Design) --- */
 
 @media (max-width: 768px) {
@@ -136,5 +223,41 @@
     padding: 0.5rem;
     flex-direction: column;
 }
+
+.fotos {
+    flex-shrink: 0; 
+    overflow: auto;
+    gap: 10px;
+    width: 100%;
+}
+
+.agregar-foto { 
+    height: 150px; 
+    width: 150px;
+    padding: 10px;
+}
+.agregar-foto p{
+    font-size: 1rem;
+}
+.foto {
+    height: 150px;
+    width: 150px;
+}
+
+.icono{
+    width: 50%;
+    height: 50%;
+}
+.icono i{
+    font-size: 2rem;
+}
+
+/* 2. LA IMAGEN (Ahora sí se extiende por todo el div al 100%) */
+.imagen {
+    width: 100%;
+    height: 100%;       /* ¡CORREGIDO!: Sube de 90% a 100% */
+    object-fit: cover;  /* Mantiene la proporción de la foto sin deformarla */
+}
+
 
 }

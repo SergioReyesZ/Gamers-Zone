@@ -131,7 +131,22 @@ form{
     color: black;
     cursor: pointer;
 }
-
+.divFoto{
+    display: flex;
+    width: 100%;
+}
+.preview{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 49%;
+}
+.preview-foto{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    
+}
 .input-foto p{
     color: gray;
 }
@@ -141,7 +156,7 @@ form{
     justify-content: center;
     align-items: center;
     border: black dotted 2px;
-    width: 100%;
+    width: 50%;
     height: 200px;
 }
 .input-foto input{
@@ -159,8 +174,8 @@ input:focus{
     outline: none;
 }
 .foto-pfp{
-    width: 150;
-    height: 150;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -191,5 +206,15 @@ input:focus{
     }
     .info{
         width: 100%;
+    }
+    .input-foto{
+        width: 100%;
+    }
+    .preview{
+        margin-top: 1rem;
+        width: 100%;
+    }
+    .divFoto{
+        flex-direction: column;
     }
 }

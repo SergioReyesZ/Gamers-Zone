@@ -31,7 +31,6 @@ async function mostrarUsuario(user){
         <ul class="cuenta-list">
             <li class="usuario">Bienvenido ${data.username} !</li>
             <li class="lista" onclick="window.location.href='cuenta.html';"><i class="bi bi-person"></i><a>Mi cuenta</a></li>
-            <li class="lista" onclick="window.location.href='configuracion.html';"><i class="bi bi-gear"></i><a>Configuración</a></li>
             <li class="lista" id=cerrarSesion><i class="bi bi-box-arrow-left"></i><a href="#" id=cerrarSesion>Cerrar sesión</a></li>
         </ul>
         `;

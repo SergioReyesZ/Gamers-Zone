@@ -151,3 +151,96 @@ function inicializarMenu() {
         document.getElementById('DatosCliente').reset();
     });
 }
+
+const imagenes = [
+    document.getElementById("img1"),
+    document.getElementById("img2"),
+    document.getElementById("img3"),
+    document.getElementById("img4"),
+    document.getElementById("img5")
+];
+
+const divs = [
+    document.getElementById("divFoto1"),
+    document.getElementById("divFoto2"),
+    document.getElementById("divFoto3"),
+    document.getElementById("divFoto4"),
+    document.getElementById("divFoto5")
+];
+
+const inputImagen = document.getElementById("inputImagen");
+const divImagen = document.getElementById("agregarFoto");
+const botones = document.querySelectorAll(".button");
+const imgModal = document.getElementById("alertaImagen");
+const divAlertas = document.getElementById("divAlertaImagen");
+let archivosSeleccionados = [];
+
+// 1. ABRIR INPUT
+divImagen.addEventListener("click", () => {
+    inputImagen.click();
+});
+
+// 2. DETECTAR NUEVAS IMÁGENES
+inputImagen.addEventListener("change", (evento) => {
+    const nuevosArchivos = Array.from(evento.target.files);
+    
+    for (let archivo of nuevosArchivos) {
+        if (archivosSeleccionados.length < 5) {
+            archivosSeleccionados.push(archivo);
+        }
+    }
+
+    // Actualizamos la vista
+    actualizarPreview();
+
+    // Limpiamos el input para poder subir el mismo archivo si se borra
+    inputImagen.value = "";
+});
+
+// 3. ASIGNAR CLICS A LOS BOTONES DE BORRAR
+botones.forEach((boton, index) => {
+    boton.addEventListener("click", () => {
+        if (archivosSeleccionados[index]) {
+            // Eliminamos el archivo del arreglo
+            archivosSeleccionados.splice(index, 1); 
+            
+            // Renderizamos de nuevo con el arreglo actualizado
+            actualizarPreview();
+        }
+    });
+});
+
+imagenes.forEach((imagen, index) => {
+    imagen.addEventListener("click", () => {
+        if (archivosSeleccionados[index]) {
+            imgModal.src = imagen.src;
+            
+            divAlertas.style.display = "flex";
+        }
+    });
+});
+
+divAlertas.addEventListener("click", () => {
+    divAlertas.style.display = "none";
+    imgModal.src = "";
+});
+
+function actualizarPreview() {
+    divs.forEach((div, index) => {
+        div.style.display = "none";
+        if (imagenes[index]) imagenes[index].src = "";
+    });
+
+    archivosSeleccionados.forEach((archivo, index) => {
+        if (imagenes[index] && divs[index]) {
+            imagenes[index].src = URL.createObjectURL(archivo);
+            divs[index].style.display = "flex";
+        }
+    });
+
+    if (archivosSeleccionados.length >= 5) {
+        divImagen.style.display = "none";
+    } else {
+        divImagen.style.display = "flex";
+    }
+}

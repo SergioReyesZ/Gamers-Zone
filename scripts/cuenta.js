@@ -210,8 +210,16 @@ async function mostrarInfo() {
     }
 }
 
-inputFoto.addEventListener("change", async (evento)=>{
-    if(evento.target.files.length > 0){
+inputFoto.addEventListener("change", (evento)=>{
+    const archivo = evento.target.files[0];
+    if(archivo){
+        document.getElementById("previewFoto").src = URL.createObjectURL(archivo);
+    }
+})
+
+document.getElementById("formCambiar").addEventListener("submit", async (evento) => {
+    evento.preventDefault(); // Evita que la página se recargue
+    if (inputFoto.files.length > 0) {
         console.log("Subiendo archivo");
         await cambiarFoto();
     }
@@ -246,9 +254,13 @@ async function cambiarFoto() {
 
             if (dbError) {
                 console.error("Error al actualizar la tabla usuario:", dbError.message);
+                document.getElementById("mensajeForm").style.color = "red";
+                document.getElementById("mensajeForm").textContent = "Error al actualizar los datos";
             } else {
                 console.log("¡Base de datos actualizada con éxito!");
+                document.getElementById("mensajeForm").textContent = "Datos actualizados con éxito";
                 await mostrarInfo();
+                
             }
         }
     }else{
